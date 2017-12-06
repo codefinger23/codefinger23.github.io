@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/11 | CodeFinger</title>
+  <title>Java编程思想 第21章 并发 | CodeFinger</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeFinger">
-<meta property="og:url" content="http://yoursite.com/archives/2017/11/index.html">
+  <meta name="description" content="到目前为止，学习到的都是顺序编程的知识。即程序中的所有事物在任意时刻都只能执行一个步骤。">
+<meta name="keywords" content="读书笔记,Java编程思想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java编程思想 第21章 并发">
+<meta property="og:url" content="http://yoursite.com/2017/12/06/Java编程思想-第21章-并发/index.html">
 <meta property="og:site_name" content="CodeFinger">
+<meta property="og:description" content="到目前为止，学习到的都是顺序编程的知识。即程序中的所有事物在任意时刻都只能执行一个步骤。">
+<meta property="og:updated_time" content="2017-12-06T16:07:19.959Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeFinger">
+<meta name="twitter:title" content="Java编程思想 第21章 并发">
+<meta name="twitter:description" content="到目前为止，学习到的都是顺序编程的知识。即程序中的所有事物在任意时刻都只能执行一个步骤。">
   
     <link rel="alternative" href="/atom.xml" title="CodeFinger" type="application/atom+xml">
   
@@ -149,36 +154,109 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java编程思想-第21章-并发" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java编程思想 第21章 并发
+    </h1>
+  
+
+        
+        <a href="/2017/12/06/Java编程思想-第21章-并发/" class="archive-article-date">
+  	<time datetime="2017-12-06T15:24:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>到目前为止，学习到的都是顺序编程的知识。即程序中的所有事物在任意时刻都只能执行一个步骤。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="并发的多面性"><a href="#并发的多面性" class="headerlink" title="并发的多面性"></a>并发的多面性</h2><p>并发编程令人困惑的一个主要原因是：使用并发时需要解决的问题有多个，而实现并发的方式也有多种，并且在这两者之间没有明显的映射关系。</p>
+<ul>
+<li>更快的执行</li>
+<li>改进代码设计</li>
+</ul>
+<h2 id="基本的线程机制"><a href="#基本的线程机制" class="headerlink" title="基本的线程机制"></a>基本的线程机制</h2><p>并发编程可以将程序划分为多个分离的、独立运行的任务。通过使用多线程机制，这些独立任务中的每一个都将由执行线程来驱动。一个线程就是在进程中的一个单一的顺序控制流，因此，单个进程可以拥有多个并发执行的任务，但是程序使得每个人物都好像有其自己的CPU一样。其底层机制是切分CPU时间。</p>
+<ul>
+<li>定义任务：通过实现Runnable接口并编写run方法，使得该任务可以执行命令。</li>
+<li>Thread类：将Runnable对象转变为工作任务的传统方式是把它提交给一个Thread构造器。调用Thread对象的start方法为该线程执行必须的初始化操作，然后调用Runnable的run方法启动任务。</li>
+<li>使用Executor：执行器可以管理Thread对象，从而简化并发编程。</li>
+<li>从任务中产生返回值：如果希望任务在完成时能够返回一个值，那么可以实现Callable接口而不是Runnable接口。</li>
+<li>休眠：影响任务行为的一种简单方式是调用sleep。</li>
+<li>优先级：线程的优先级将该线程的重要性传递给了调度器。尽管CPU处理现有线程集的顺序是不确定的，但是调度器将倾向于让优先权最高的线程先执行。</li>
+<li>让步：通过yield方法可以让线程调度机制知道该线程以工作得差不多了。</li>
+<li>后台线程：所谓后台线程，是指在程序运行的时候在后台提供一种通用服务的线程，并且这种线程并不属于程序中不可或缺的部分。</li>
+</ul>
+<h2 id="共享受限资源"><a href="#共享受限资源" class="headerlink" title="共享受限资源"></a>共享受限资源</h2><p>可以把单线程程序当作在问题域求解的单一实体。多线程会导致冲突问题。</p>
+<ul>
+<li>不正确地访问资源</li>
+<li>解决共享资源竞争</li>
+<li>原子性和易变性</li>
+<li>原子类</li>
+<li>临界区</li>
+<li>在其他对象上同步</li>
+<li>线程本地存储</li>
+</ul>
+<h2 id="终结任务"><a href="#终结任务" class="headerlink" title="终结任务"></a>终结任务</h2><p>cancel和isCanceled方法被放到了一个所有任务都可以看到的类中。这些任务通过检查isCanceled来确定合适终止自己。</p>
+<h2 id="线程之间的协作"><a href="#线程之间的协作" class="headerlink" title="线程之间的协作"></a>线程之间的协作</h2><p>当使用线程同时运行多个任务时，可以通过使用锁来同步两个任务的行为，从而使得一个任务不会干涉另一个任务的资源。</p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p>一个对象可以有synchronized方法或其他形式的枷锁机制来防止别的任务在互斥还没有释放的时候就访问这个对象。任务可以变成阻塞状态，容易造成死锁问题。</p>
+<h2 id="仿真"><a href="#仿真" class="headerlink" title="仿真"></a>仿真</h2><p>并发最有趣的也最令人兴奋的用法就是创建仿真。通过使用并发，仿真的每个构件都可以成为其自身的任务。</p>
+<h2 id="性能调优"><a href="#性能调优" class="headerlink" title="性能调优"></a>性能调优</h2><p>在Java SE5的java.util.concurrent类库中存在着数量庞大的用于性能提高的类。</p>
+<h2 id="活动对象"><a href="#活动对象" class="headerlink" title="活动对象"></a>活动对象</h2><p>Java中的线程机制看起来非常复杂并难以正确使用。有一种可替换的方式被称为活动对象或行动者。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>多线程的主要缺陷有：</p>
+<ol>
+<li>等待共享资源的时候性能降低</li>
+<li>需要处理线程的额外CPU话费</li>
+<li>糟糕的程序设计导致不必要的复杂度</li>
+<li>有可能产生一些病态行为，如饿死、竞争、死锁和活锁。</li>
+<li>不同平台导致的不一致性。</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>打赏2元，你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/30/Java编程思想-第15章-泛型/" class="archive-article-date">
-  	<time datetime="2017-11-30T14:48:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/30/Java编程思想-第15章-泛型/">Java编程思想 第15章 泛型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,400 +272,116 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/06/Java编程思想-第21章-并发/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/29/Java编程思想-第14章-类型信息/" class="archive-article-date">
-  	<time datetime="2017-11-29T15:23:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/05/Java编程思想-第20章-注解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java编程思想 第20章 注解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/29/Java编程思想-第14章-类型信息/">Java编程思想 第14章 类型信息</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/28/Java编程思想-第13章-字符串/" class="archive-article-date">
-  	<time datetime="2017-11-28T13:55:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/28/Java编程思想-第13章-字符串/">Java编程思想 第13章 字符串</a>
-    </h1>
+  <div id="SOHUCS" sid="Java编程思想-第21章-并发" ></div> 
+<script type="text/javascript"> 
+window.YiliaChangyanWrap = function() {
+    var appid = "cytdzaPlC"; 
+    var conf = "prod_82a316b9427f4648629ce48d3be8bcf0"; 
+    var width = window.innerWidth || document.documentElement.clientWidth; 
+    if (width < 960) { 
+    window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+}
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/27/Java编程思想-第12章-通过异常处理错误/" class="archive-article-date">
-  	<time datetime="2017-11-27T14:37:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/27/Java编程思想-第12章-通过异常处理错误/">Java编程思想 第12章 通过异常处理错误</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/26/Java编程思想-第11章-持有对象/" class="archive-article-date">
-  	<time datetime="2017-11-26T11:54:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/26/Java编程思想-第11章-持有对象/">Java编程思想 第11章 持有对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/Java编程思想-第10章-内部类/" class="archive-article-date">
-  	<time datetime="2017-11-25T13:23:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/Java编程思想-第10章-内部类/">Java编程思想 第10章 内部类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/25/Java编程思想-第9章-接口/" class="archive-article-date">
-  	<time datetime="2017-11-24T17:08:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/Java编程思想-第9章-接口/">Java编程思想 第9章 接口</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/23/Java编程思想-第8章-多态/" class="archive-article-date">
-  	<time datetime="2017-11-23T14:15:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/23/Java编程思想-第8章-多态/">Java编程思想 第8章 多态</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/22/Java编程思想-第7章-复用类/" class="archive-article-date">
-  	<time datetime="2017-11-22T14:26:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/22/Java编程思想-第7章-复用类/">Java编程思想 第7章 复用类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/Java编程思想-第6章-访问权限控制/" class="archive-article-date">
-  	<time datetime="2017-11-21T14:45:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/Java编程思想-第6章-访问权限控制/">Java编程思想 第6章 访问权限控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/11/page/2/">2</a><a class="page-number" href="/archives/2017/11/page/3/">3</a><a class="extend next" rel="next" href="/archives/2017/11/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -611,8 +405,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

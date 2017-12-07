@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/25/Java编程思想-第9章-接口/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="接口和内部类为我们提供了一种将接口与实现分离得更加结构化的方法。">
-<meta property="og:updated_time" content="2017-12-05T14:43:13.798Z">
+<meta property="og:updated_time" content="2017-12-07T15:43:53.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java编程思想 第9章 接口">
 <meta name="twitter:description" content="接口和内部类为我们提供了一种将接口与实现分离得更加结构化的方法。">
@@ -175,9 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>接口和内部类为我们提供了一种将接口与实现分离得更加结构化的方法。<br><a id="more"></a></p>
-<h2 id="抽象类和抽象方法"><a href="#抽象类和抽象方法" class="headerlink" title="抽象类和抽象方法"></a>抽象类和抽象方法</h2></blockquote>
-<p>Java提供了一个叫做抽象方法的机制，这种方法是不完整的；仅有声明而没有方法体。包含抽象方法的类叫做抽象类。如果一个类包含一个或多个抽象方法，该类必须被限定为抽象的，否则编译器就会报错。</p>
+<p>接口和内部类为我们提供了一种将接口与实现分离得更加结构化的方法。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="抽象类和抽象方法"><a href="#抽象类和抽象方法" class="headerlink" title="抽象类和抽象方法"></a>抽象类和抽象方法</h2><p>Java提供了一个叫做抽象方法的机制，这种方法是不完整的；仅有声明而没有方法体。包含抽象方法的类叫做抽象类。如果一个类包含一个或多个抽象方法，该类必须被限定为抽象的，否则编译器就会报错。</p>
 <p>编译器会确保抽象类的纯粹性，无法对抽象类产生对象。如果从一个抽象类继承，并想创建该新类的对象，那么就必须为基类中的所有抽象方法提供方法定义。如果不这样做，那么导出类便也是抽象类，且编译器将会强制使用abstract关键字来限定这个类。</p>
 <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>interface关键字使抽象的概念更向前迈进了一步。abstract关键字允许人们在类中创建一个或多个没有任何定义的方法——提供了接口部分，但是没有任何相应的具体实现，这些实现是由此类的继承者创建的。interface这个关键字产生一个完全抽象的类，它根本就没有提供任何具体实现。它允许创建者确定方法名、参数列表和放回类型，但是没有任何方法体。接口只提供了形式，而未提供任何具体实现。</p>
 <p>一个接口表示：“所有实现了该特定接口的类看起来都像这样”。因此，任何使用某种特定接口的代码都知道可以调用该接口的哪些方法。</p>
@@ -472,11 +473,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
             
             <div class="clearfix"></div>

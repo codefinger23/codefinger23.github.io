@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/30/Java编程思想-第15章-泛型/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="一般的类和方法，只能使用具体的类型：要么是基本类型，要么是自定义的类。如果要编写可以用于多种类型的代码，这种刻板的限制对代码的束缚就会很大。">
-<meta property="og:updated_time" content="2017-12-05T14:42:57.882Z">
+<meta property="og:updated_time" content="2017-12-07T15:44:29.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java编程思想 第15章 泛型">
 <meta name="twitter:description" content="一般的类和方法，只能使用具体的类型：要么是基本类型，要么是自定义的类。如果要编写可以用于多种类型的代码，这种刻板的限制对代码的束缚就会很大。">
@@ -175,9 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>一般的类和方法，只能使用具体的类型：要么是基本类型，要么是自定义的类。如果要编写可以用于多种类型的代码，这种刻板的限制对代码的束缚就会很大。<br><a id="more"></a></p>
-<h2 id="与C-的比较"><a href="#与C-的比较" class="headerlink" title="与C++的比较"></a>与C++的比较</h2></blockquote>
-<p>Java的泛型借鉴了C++模板，所以了解C++的模板有助于了解Java泛型的的基础，可以知道Java泛型的局限以及为什么会有这些局限。</p>
+<p>一般的类和方法，只能使用具体的类型：要么是基本类型，要么是自定义的类。如果要编写可以用于多种类型的代码，这种刻板的限制对代码的束缚就会很大。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="与C-的比较"><a href="#与C-的比较" class="headerlink" title="与C++的比较"></a>与C++的比较</h2><p>Java的泛型借鉴了C++模板，所以了解C++的模板有助于了解Java泛型的的基础，可以知道Java泛型的局限以及为什么会有这些局限。</p>
 <h2 id="简单泛型"><a href="#简单泛型" class="headerlink" title="简单泛型"></a>简单泛型</h2><p>促成泛型的出现最引人注目的一个原因就是为了创造容器类。与之前使用Object，要达到暂时不指定类型，而是稍后再决定具体使用什么类型的目的，需要使用类型参数，用尖括号括住。然后在使用这个类的时候，再用实际的类型替换此类型参数。</p>
 <h2 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h2><p>泛型也可以应用于接口。例如生成器，这是一种专门负责创建对象的类。实际上，这是工厂方法设计模式的一种应用。不过，当使用生成器创建对象时，它不需要任何参数，而工厂方法一般需要参数。也就是说，生成器无需额外的信息就知道如何创建新对象。</p>
 <h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><p>参数化方法可以用在泛型类或非泛型类，也就是说泛型方法与类没有关系。泛型方法使得该方法能够独立于类而产生变换。一个基本的指导原则：无论何时，应该尽量使用泛型方法。另外，对于一个static的方法而言，无法访问泛型类的类型参数，所以如果static方法需要使用范型能力，就必须使其称为泛型方法。要定义泛型方法，只需将泛型参数列表置于返回值之前。</p>
@@ -480,11 +481,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
             
             <div class="clearfix"></div>

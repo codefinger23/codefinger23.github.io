@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/03/Java编程思想-第18章-Java-I-O系统/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="对程序语言的设计者来说，创建一个好的输入/输出(I/O)系统是一项艰难的任务。">
-<meta property="og:updated_time" content="2017-12-05T14:42:47.951Z">
+<meta property="og:updated_time" content="2017-12-07T15:44:45.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java编程思想 第18章 Java I&#x2F;O系统">
 <meta name="twitter:description" content="对程序语言的设计者来说，创建一个好的输入/输出(I/O)系统是一项艰难的任务。">
@@ -175,9 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>对程序语言的设计者来说，创建一个好的输入/输出(I/O)系统是一项艰难的任务。<br><a id="more"></a></p>
-<h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h2></blockquote>
-<p>File类整个名字有一定的误导性；它既能代表一个特定文件的名称，又能代表一个目录下的一组文件的名称。如果它指的是一个文件集，就可以调用list方法，这个方法会返回一个字符数组。如果想取得不同的目录列表，只需要再创建一个不同的File对象就可以了。</p>
+<p>对程序语言的设计者来说，创建一个好的输入/输出(I/O)系统是一项艰难的任务。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h2><p>File类整个名字有一定的误导性；它既能代表一个特定文件的名称，又能代表一个目录下的一组文件的名称。如果它指的是一个文件集，就可以调用list方法，这个方法会返回一个字符数组。如果想取得不同的目录列表，只需要再创建一个不同的File对象就可以了。</p>
 <h2 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h2><p>编程语言的I/O类库中常使用流这个抽象概念，它代表任何有能力产出数据的数据源对象或者是有能力接收数据的接收端对象。“流”屏蔽了实际的I/O设备中处理数据的细节。</p>
 <p>Java类库中I/O类分成输入和输出两部分，可以再JDK文档里的类层次结构中查看到。通过继承，任何Inputstream或Reader派生而来的类都包含read的基本方法，用于读取单个字节或者字节数组。同样，任何自OuputStream或Writer派生而来的类都含有名为write的基本方法，用于写单个字节或者字节数组。通常很少使用单一的类来创建流对象，而是通过叠合多个对象来提供所期望的功能。</p>
 <h2 id="添加属性和有用的接口"><a href="#添加属性和有用的接口" class="headerlink" title="添加属性和有用的接口"></a>添加属性和有用的接口</h2><p>装饰器再第15章引入。Java I/O类库需要多种不同功能的组合，这正式使用装饰器模式的理由所在。这也是Java I/O类库里存在filter类的原因所在，抽象类filter是所有装饰器类的基类。装饰器必须具有和它所装饰的对象相同的接口，但它也可以扩展接口，而这种情况只发生在个别filter类中。</p>
@@ -490,11 +491,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
             
             <div class="clearfix"></div>

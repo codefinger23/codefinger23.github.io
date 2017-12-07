@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/23/Java编程思想-第8章-多态/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="“我曾经被问到‘求教，Babbage先生，如果你向机器中输入错误的数字，可以得到正确的答案吗？’ 我无法恰当地理解产生这种问题的概念上的混淆” ——Charles Babbage(1791-1871)在面向对象的程序设计语言中，多态是继数据抽象和继承之后的第三种基本特征。">
-<meta property="og:updated_time" content="2017-12-05T14:43:17.310Z">
+<meta property="og:updated_time" content="2017-12-07T15:43:45.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java编程思想 第8章 多态">
 <meta name="twitter:description" content="“我曾经被问到‘求教，Babbage先生，如果你向机器中输入错误的数字，可以得到正确的答案吗？’ 我无法恰当地理解产生这种问题的概念上的混淆” ——Charles Babbage(1791-1871)在面向对象的程序设计语言中，多态是继数据抽象和继承之后的第三种基本特征。">
@@ -175,9 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>“我曾经被问到‘求教，Babbage先生，如果你向机器中输入错误的数字，可以得到正确的答案吗？’ 我无法恰当地理解产生这种问题的概念上的混淆” ——Charles Babbage(1791-1871)<br>在面向对象的程序设计语言中，多态是继数据抽象和继承之后的第三种基本特征。<br><a id="more"></a></p>
-<h2 id="再论向上转型"><a href="#再论向上转型" class="headerlink" title="再论向上转型"></a>再论向上转型</h2></blockquote>
-<p>在第7章中我们已经知道，对象既可以作为它自己本身的类型使用，也可以作为它的基类型使用。而这种把某个对象的引用视为对其基类型的引用的做法称作向上转型——因为在继承树的画法，基类是放置在上方的。</p>
+<p>“我曾经被问到‘求教，Babbage先生，如果你向机器中输入错误的数字，可以得到正确的答案吗？’ 我无法恰当地理解产生这种问题的概念上的混淆” ——Charles Babbage(1791-1871)<br>在面向对象的程序设计语言中，多态是继数据抽象和继承之后的第三种基本特征。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="再论向上转型"><a href="#再论向上转型" class="headerlink" title="再论向上转型"></a>再论向上转型</h2><p>在第7章中我们已经知道，对象既可以作为它自己本身的类型使用，也可以作为它的基类型使用。而这种把某个对象的引用视为对其基类型的引用的做法称作向上转型——因为在继承树的画法，基类是放置在上方的。</p>
 <h2 id="转机"><a href="#转机" class="headerlink" title="转机"></a>转机</h2><ul>
 <li>方法调用绑定：将一个方法调用同一个方法主体关联起来被称作绑定。若在程序执行前进行绑定，叫做前期绑定。这是面向过程的语言中不需要选择就默认的绑定方式。但是Java采用的是后期绑定，它的含义就是在运行时根据对象的类型进行绑定。后期绑定也叫做动态绑定或运行时绑定。</li>
 <li>产生正确的行为：一旦知道Java中所有方法都是通过动态绑定实现多态这个事实后，我们就可以编写只与基类打交道的程序代码了，并且这些代码对所有的导出类都可以正确运行。或者换一种说法，发送消息给某个对象，让该对象去断定应该做什么事。</li>
@@ -471,11 +472,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
             
             <div class="clearfix"></div>

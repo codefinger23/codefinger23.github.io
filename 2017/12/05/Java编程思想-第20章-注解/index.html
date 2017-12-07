@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/05/Java编程思想-第20章-注解/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。">
-<meta property="og:updated_time" content="2017-12-05T14:42:33.215Z">
+<meta property="og:updated_time" content="2017-12-07T14:16:52.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java编程思想 第20章 注解">
 <meta name="twitter:description" content="注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。">
@@ -175,9 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。<br><a id="more"></a></p>
-<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2></blockquote>
-<p>基本语法部分有定义注解和使用注解，除了@符号以外，注解的定义和接口很像，定义注解需要一些元注解，如@Target和@Retention。</p>
+<p>注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>基本语法部分有定义注解和使用注解，除了@符号以外，注解的定义和接口很像，定义注解需要一些元注解，如@Target和@Retention。</p>
 <h2 id="编写注解处理器"><a href="#编写注解处理器" class="headerlink" title="编写注解处理器"></a>编写注解处理器</h2><p>使用注解的过程中，很重要的一个部分就是创建与使用注解处理器。Java SE5扩张了反射机制的API，可以帮助程序员构造这类工具。还有一个外部工具apt帮助程序员解析带有注解的Java源代码。</p>
 <h2 id="使用apt处理注解"><a href="#使用apt处理注解" class="headerlink" title="使用apt处理注解"></a>使用apt处理注解</h2><p>注解处理工具apt，这是Sun为了帮助注解的处理过程而提供的工具。与javac一样，apt被设计为操作Java源文件，而不是编译后的类。默认情况下，apt会在处理完源文件后编译它们。</p>
 <h2 id="将观察者模式用于apt"><a href="#将观察者模式用于apt" class="headerlink" title="将观察者模式用于apt"></a>将观察者模式用于apt</h2><p>为了防止处理注解的复杂度的攀升，mirror API提供了对观察者模式的支持。观察者会遍历某个数据结构或一个对象的集合，对其中每一个对象执行一个操作。该数据结构无需有序，而对每个对象执行的操作，都是特定于此对象的类型。这就将操作与对象解耦，也就是说，可以添加新的操作而无需向类的定义中添加方法。</p>
@@ -461,11 +462,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
             
             <div class="clearfix"></div>

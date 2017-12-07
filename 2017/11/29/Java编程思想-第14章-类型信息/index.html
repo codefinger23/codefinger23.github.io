@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/29/Java编程思想-第14章-类型信息/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="运行时类型信息使得你可以在程序运行时发现和使用类型信息。">
-<meta property="og:updated_time" content="2017-12-05T14:43:00.754Z">
+<meta property="og:updated_time" content="2017-12-07T15:44:23.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java编程思想 第14章 类型信息">
 <meta name="twitter:description" content="运行时类型信息使得你可以在程序运行时发现和使用类型信息。">
@@ -175,9 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>运行时类型信息使得你可以在程序运行时发现和使用类型信息。<br><a id="more"></a></p>
-<h2 id="为什么需要RTTI-RunTime-Type-Identification"><a href="#为什么需要RTTI-RunTime-Type-Identification" class="headerlink" title="为什么需要RTTI(RunTime Type Identification)"></a>为什么需要RTTI(RunTime Type Identification)</h2></blockquote>
-<p>当从基类匿名引用容器中取出元素，这种容器——实际上它将所有的事物都当做Object持有——会自动将结果转型回基类。这是RTTI最基本的使用形式，因为在Java中，所有的类型转换都是在运行时进行正确性检查的。这也是RTTI名字的含义：在运行时，识别一个对象的类型。</p>
+<p>运行时类型信息使得你可以在程序运行时发现和使用类型信息。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="为什么需要RTTI-RunTime-Type-Identification"><a href="#为什么需要RTTI-RunTime-Type-Identification" class="headerlink" title="为什么需要RTTI(RunTime Type Identification)"></a>为什么需要RTTI(RunTime Type Identification)</h2><p>当从基类匿名引用容器中取出元素，这种容器——实际上它将所有的事物都当做Object持有——会自动将结果转型回基类。这是RTTI最基本的使用形式，因为在Java中，所有的类型转换都是在运行时进行正确性检查的。这也是RTTI名字的含义：在运行时，识别一个对象的类型。</p>
 <p>但是RTTI类型转换并不彻底，只能从Object转型为基类，而不是基类的导出类。这是因为通过容器和泛型机制来保证的，但是实际的基类引用调用的具体代码是由多态机制决定的。也可以通过RTTI查询具体的类型信息，然后选择或者提出特例。</p>
 <h2 id="Class对象"><a href="#Class对象" class="headerlink" title="Class对象"></a>Class对象</h2><p>要理解RTTI在Java中的工作原理，首先必须知道类型信息在运行时是如何表示的。这项工作是由被称为Class对象的特殊对象完成的，它包含了与类有关的信息。事实上，Class对象就是用来创建类的所有的常规对象的。Java使用Class对象来执行其RTTI，即使正在执行的是类似转型这样的操作。Class类还拥有大量的使用RTTI的其他方式。</p>
 <p>类是程序的一部分，每个类都有一个Class对象。换言之，每当编写并且编译了一个新类，就会产生一个Class对象，更恰当的说，是被保存在一个同名的.class的对象一样。为了生成这个类的对象，运行这个程序的Java虚拟机将使用被称为“类加载器”的子系统。</p>
@@ -474,11 +475,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JS高程 第十九章 E4X | CodeFinger</title>
+  <title>CSS: The Definitive Guide-Chapter 3-Structure and the Cascade | CodeFinger</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在以BEA Systems为首的几家公司建议下，为ECMAScript添加一项扩张，增加原生的的XML支持。2004年6月，E4X(ECMAScript for XML) 以ECMA-357标准的形式发布。E4X本身不是一门语言，它只是ECMAScript语言的可选扩展。就其本身而言，E4X为处理XML定义了新的语法">
-<meta name="keywords" content="读书笔记,JavaScript高级程序设计">
+  <meta name="description" content="The structural tree is what allows selectors to function and is also central to a similarly crucial aspect of CSS: inheritance.">
+<meta name="keywords" content="读书笔记,CSS: The Definitive Guide">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS高程 第十九章 E4X">
-<meta property="og:url" content="http://yoursite.com/2017/11/09/JS高程-第十九章-E4X/index.html">
+<meta property="og:title" content="CSS: The Definitive Guide-Chapter 3-Structure and the Cascade">
+<meta property="og:url" content="http://yoursite.com/2017/12/10/CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade/index.html">
 <meta property="og:site_name" content="CodeFinger">
-<meta property="og:description" content="在以BEA Systems为首的几家公司建议下，为ECMAScript添加一项扩张，增加原生的的XML支持。2004年6月，E4X(ECMAScript for XML) 以ECMA-357标准的形式发布。E4X本身不是一门语言，它只是ECMAScript语言的可选扩展。就其本身而言，E4X为处理XML定义了新的语法，也定义了特定于XML的对象。">
-<meta property="og:updated_time" content="2017-11-16T14:12:06.236Z">
+<meta property="og:description" content="The structural tree is what allows selectors to function and is also central to a similarly crucial aspect of CSS: inheritance.">
+<meta property="og:updated_time" content="2017-12-10T14:30:05.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS高程 第十九章 E4X">
-<meta name="twitter:description" content="在以BEA Systems为首的几家公司建议下，为ECMAScript添加一项扩张，增加原生的的XML支持。2004年6月，E4X(ECMAScript for XML) 以ECMA-357标准的形式发布。E4X本身不是一门语言，它只是ECMAScript语言的可选扩展。就其本身而言，E4X为处理XML定义了新的语法，也定义了特定于XML的对象。">
+<meta name="twitter:title" content="CSS: The Definitive Guide-Chapter 3-Structure and the Cascade">
+<meta name="twitter:description" content="The structural tree is what allows selectors to function and is also central to a similarly crucial aspect of CSS: inheritance.">
   
     <link rel="alternative" href="/atom.xml" title="CodeFinger" type="application/atom+xml">
   
@@ -154,20 +154,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JS高程-第十九章-E4X" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS高程 第十九章 E4X
+      CSS: The Definitive Guide-Chapter 3-Structure and the Cascade
     </h1>
   
 
         
-        <a href="/2017/11/09/JS高程-第十九章-E4X/" class="archive-article-date">
-  	<time datetime="2017-11-09T14:18:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
+        <a href="/2017/12/10/CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade/" class="archive-article-date">
+  	<time datetime="2017-12-10T12:20:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
 </a>
         
       </header>
@@ -175,34 +175,43 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>在以BEA Systems为首的几家公司建议下，为ECMAScript添加一项扩张，增加原生的的XML支持。2004年6月，E4X(ECMAScript for XML) 以ECMA-357标准的形式发布。E4X本身不是一门语言，它只是ECMAScript语言的可选扩展。就其本身而言，E4X为处理XML定义了新的语法，也定义了特定于XML的对象。<br><a id="more"></a></p>
+<p>The structural tree is what allows selectors to function and is also central to a similarly crucial aspect of CSS: inheritance.</p>
 </blockquote>
-<h2 id="E4X的类型"><a href="#E4X的类型" class="headerlink" title="E4X的类型"></a>E4X的类型</h2><p>作为ECMAScript的扩展，E4X定义了如下几个全新的全局类型。</p>
+<a id="more"></a>
+<h2 id="Specificity"><a href="#Specificity" class="headerlink" title="Specificity"></a>Specificity</h2><p>A selector’s specificity is determined by the the components of the selector itself. A specificity value is expressed in four parts, like this: 0,0,0,0. The actual specificity of a selector is determined as follows:</p>
 <ul>
-<li>XML：XML结构中的任何一个独立的部分，继承自Object。</li>
-<li>XMLList：XML对象的集合</li>
-<li>Namespace：命名空间前缀与命名空间URI组成的一个限定名</li>
-<li>QName：由内部名称和命名空间URI组成的一个限定名</li>
+<li>For every ID attribute value given in the selector, add 0,1,0,0.</li>
+<li>For every class attribute value, attribute selection, or pseudo-class given in the selection, add 0,0,1,0.</li>
+<li>For every element and pseudo-element given in the selector, add 0,0,0,1.</li>
+<li>Combinators and the universal selector do not contribute anything to the specificity(more on the these value later)</li>
 </ul>
-<p>E4X定义的这4个类型可以表现XML文档中的所有部分，其内部机制是将每一种类型都映射为多个DOM类型。</p>
-<h2 id="一般用法"><a href="#一般用法" class="headerlink" title="一般用法"></a>一般用法</h2><p>在将XML对象、元素、特性和文本集合到一个层次化对象之后，就可以使用点号加特性或标签名的方式来访问其中不同的层次和结构。每个子元素都是父元素的一个属性，而属性名与元素的内部名称相同。如果子元素只包含文本，则相应的属性只返回文本。</p>
-<h2 id="其他变化"><a href="#其他变化" class="headerlink" title="其他变化"></a>其他变化</h2><p>为了与ECMAScript做到无缝集成，E4X也对语言基础进行了一些修改。其中之一就是引入了for-each-in循环，以便迭代遍历每一个属性并返回属性的值。</p>
-<p>E4X还添加了一个全局函数，名叫isXMLName。这个函数接受一个字符串，并在这个字符串是元素或特性的有效内部名称的情况下返回true。</p>
-<h2 id="全面启用E4X"><a href="#全面启用E4X" class="headerlink" title="全面启用E4X"></a>全面启用E4X</h2><p>鉴于E4X在很多方面给标准JavaScript带来不同，因此Firefox在默认情况下只启用E4X中与其他代码能够相安无事的那些特性。要想完整地启用E4X，需要将script标签type特性设置为”text/javascript;e4x=1”，例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript;e4x=1&quot; src=&quot;e4x_file.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>在打开这个开关之后，就会全面启用E4X，从而能够正确地解析嵌入在E4X字面量中的注释和CData片段。在没有完整启用E4X的情况下就会导致语法错误。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>E4X是以ECMA-357标准的形式发布的对ECMAScript的一个扩展。E4X的目的是为操作XML数据提供与标准ECMAScript更相近的语法。E4X具有以下特性。</p>
-<ul>
-<li>与DOM不同，E4X只用一个类型来表示XML中的各种节点</li>
-<li>XML对象中封装了对所有节点都有用的数据和行为</li>
-<li>另外两个类型，Namespace和QName，分别表示命名空间和限定名</li>
-</ul>
-<p>为便于查询XML结构，E4X还修改了标准的ECMAScript语法。</p>
-<ul>
-<li>使用两个点表示匹配所有后代元素，使用@字符表示应该返回一或多个特性</li>
-<li>星号字符是一个通配符，可以匹配任意类型的节点</li>
-<li>所有这些查询都可以通过一组执行相同操作的方法来实现</li>
-</ul>
+<p>The first zero is reserved for inline style declarations, which trump any other declaration’s specificity.</p>
+<blockquote>
+<p>The primacy of inline style declarations is new to CSS2.1, and it exists to captrue the state of web brower behavior at the time CSS2.1 was written. In CSS2, the specificity of inline style declaration was 1,0,0(CSS2 specificities had three values, not four). In other words, it had the same specificity as an ID selector, which would have easily overridden inline styles.</p>
+</blockquote>
+<p>important declarations can let a declaration outweights all other considerations. mark them by inserting !important just before the terminating semicolon in a declaration.</p>
+<h2 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h2><p>Inheritance is the mechanism by which styles are applied not only to a specified element, but also to its descendats.The value is then propagated down the tree to the descendant elements and continues on until there are no more descendants to inherit the value.</p>
+<blockquote>
+<p>some properties are not inherited. As it happens, most of the box-model properties——including margins, padding, backgrounds, and borders——are not inherited.</p>
+</blockquote>
+<h2 id="The-Cascade"><a href="#The-Cascade" class="headerlink" title="The Cascade"></a>The Cascade</h2><p>CSS is based on a method of causing styles to cascade together, which is made possible by combining inheritance and specificity.</p>
+<ol>
+<li>Find all rules that contain a selector that matches a given element.</li>
+<li>Sort by explicit weight all declarations applying to the element. Those rules marked !important are given higher weight than those that are not. Sort by origin all declarations applying to a given element. There are three origins: author, reader, and user agent. Under normal circumstances, the author’s styles win out over the reader’s styles. !important reader styles are stronger than any other styles, including !important author styles. Both auther and reader styles override the user agent ‘s default styles.</li>
+<li>Sort by specificity all declarations applying to a given element. Those elments with a higher specificity have more weight than those with lower specificity.</li>
+<li>Sort by order all declarations applying to a given elment. The later a declaration appears in the style sheet or document, the more weight it is given. Declarations that appear in an imported style sheet are considered to come before all declarations within the style sheet that imports them.</li>
+</ol>
+<h3 id="Sorting-by-Weight-and-Origin"><a href="#Sorting-by-Weight-and-Origin" class="headerlink" title="Sorting by Weight and Origin"></a>Sorting by Weight and Origin</h3><p>There are five levels to consider in terms of declaration weight. In order of most to least weight.</p>
+<ol>
+<li>Reader important declarations</li>
+<li>Author important declarations</li>
+<li>Author normal declarations</li>
+<li>Reader normal declarations</li>
+<li>User agent declarations</li>
+</ol>
+<h3 id="Sorting-by-Specificity"><a href="#Sorting-by-Specificity" class="headerlink" title="Sorting by Specificity"></a>Sorting by Specificity</h3><p>According to the third rule, if conflicting declarations apply to an element and they all have the same weight, they should be sorted by specificity, with the most specific declaration winning out.</p>
+<h3 id="Sorting-by-Order"><a href="#Sorting-by-Order" class="headerlink" title="Sorting by Order"></a>Sorting by Order</h3><p>Finally, under the fourth rule, if two rules have exactly the same weight, origin, and specificity, then the one that occurs later in the style sheet wins out.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Perhaps the most fundamental aspect of Cascading Style Sheets is the cascade itself——the process by which conflicting declarations are sorted out and from which the final document presentation is determined. Integral to this process is the specificity of selectors and their associated declarations, and the mechanism of inheritance.</p>
 
       
 
@@ -251,7 +260,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
         		</li>
       		
 		</ul>
@@ -307,7 +316,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/09/JS高程-第十九章-E4X/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/10/CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -321,18 +330,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/11/10/JS高程-第20章-JSON/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JS高程 第20章 JSON
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/08/JS高程-第十八章-JavaScript与XML/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JS高程 第十八章 JavaScript与XML</div>
+    <a href="/2017/12/10/CSS-The-Definitive-Guide-Chapter-2-Selectors/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS: The Definitive Guide-Chapter 2-Selectors</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -362,7 +362,7 @@
   
 
   
-  <div id="SOHUCS" sid="JS高程-第十九章-E4X" ></div> 
+  <div id="SOHUCS" sid="CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade" ></div> 
 <script type="text/javascript"> 
 window.YiliaChangyanWrap = function() {
     var appid = "cytdzaPlC"; 

@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/08/JS高程-第十八章-JavaScript与XML/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="XML曾一度成为存储和通过因特网传输结构化数据的标准。DOM规范的制定，不仅是为了方便在Web浏览器中使用XML，也是为了在桌面及服务器应用程序中处理XML数据。此前，由于浏览器无法解析XML数据，很多开发人员都要手动编写自己的XML解析器。而自从DOM出现后，所有浏览器都内置了对XML的原生支持，同时也提供了一系列相关的技术支持。">
-<meta property="og:updated_time" content="2017-11-16T14:12:06.248Z">
+<meta property="og:updated_time" content="2017-12-11T16:40:02.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第十八章 JavaScript与XML">
 <meta name="twitter:description" content="XML曾一度成为存储和通过因特网传输结构化数据的标准。DOM规范的制定，不仅是为了方便在Web浏览器中使用XML，也是为了在桌面及服务器应用程序中处理XML数据。此前，由于浏览器无法解析XML数据，很多开发人员都要手动编写自己的XML解析器。而自从DOM出现后，所有浏览器都内置了对XML的原生支持，同时也提供了一系列相关的技术支持。">
@@ -175,8 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>XML曾一度成为存储和通过因特网传输结构化数据的标准。DOM规范的制定，不仅是为了方便在Web浏览器中使用XML，也是为了在桌面及服务器应用程序中处理XML数据。此前，由于浏览器无法解析XML数据，很多开发人员都要手动编写自己的XML解析器。而自从DOM出现后，所有浏览器都内置了对XML的原生支持，同时也提供了一系列相关的技术支持。<br><a id="more"></a></p>
+<p>XML曾一度成为存储和通过因特网传输结构化数据的标准。DOM规范的制定，不仅是为了方便在Web浏览器中使用XML，也是为了在桌面及服务器应用程序中处理XML数据。此前，由于浏览器无法解析XML数据，很多开发人员都要手动编写自己的XML解析器。而自从DOM出现后，所有浏览器都内置了对XML的原生支持，同时也提供了一系列相关的技术支持。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="浏览器对XML-DOM的支持"><a href="#浏览器对XML-DOM的支持" class="headerlink" title="浏览器对XML DOM的支持"></a>浏览器对XML DOM的支持</h2><p>在正式的规范诞生以前，浏览器提供商实现的XML解决方案不仅对XML的支持程度参差不齐，而且对同一特性的支持也各不相同。DOM2级是第一个提到动态床阿金XML DOM概念的规范。DOM3级进一步增强了XML DOM，新增了解析和序列化等特性。然而，当DOM3级规范的各项条款尘埃落定之后，大多数浏览器也都实现了各自不同的解决方案。</p>
 <h3 id="DOM2级核心"><a href="#DOM2级核心" class="headerlink" title="DOM2级核心"></a>DOM2级核心</h3><p>DOM2级在domcument.implementation中引入了createDocument方法。该方法可以用来创建一个只带有根元素的空白XML文档。</p>
 <h3 id="DOMParser类型"><a href="#DOMParser类型" class="headerlink" title="DOMParser类型"></a>DOMParser类型</h3><p>为了将XML解析为DOM文档，Firefox首先引入了DOMParser类型；后台其他浏览器也支持了这个类型。在解析XML之前，首先必须创建一个DOMParser的实例，然后再调用parseFromString方法。这个方法接收两个参数：要解析的XML字符串和内容类型。返回值是Document实例。</p>

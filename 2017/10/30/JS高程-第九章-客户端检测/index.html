@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/30/JS高程-第九章-客户端检测/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="编写Web程序实际上是为了更加广阔的使用程序，但是，由于不同浏览器，不同平台下的表现各不相同，在这种情况下，客户端检测就作为一个很关键的部分而存在，它决定了我们编写的程序对于不同平台的展现程度，比如想要在低版本的IE浏览器和最新的Chrome浏览器中呈现的程序，往往需要更多的兼容性。">
-<meta property="og:updated_time" content="2017-11-16T14:10:14.150Z">
+<meta property="og:updated_time" content="2017-12-11T16:38:53.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第九章 客户端检测">
 <meta name="twitter:description" content="编写Web程序实际上是为了更加广阔的使用程序，但是，由于不同浏览器，不同平台下的表现各不相同，在这种情况下，客户端检测就作为一个很关键的部分而存在，它决定了我们编写的程序对于不同平台的展现程度，比如想要在低版本的IE浏览器和最新的Chrome浏览器中呈现的程序，往往需要更多的兼容性。">
@@ -175,8 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>编写Web程序实际上是为了更加广阔的使用程序，但是，由于不同浏览器，不同平台下的表现各不相同，在这种情况下，客户端检测就作为一个很关键的部分而存在，它决定了我们编写的程序对于不同平台的展现程度，比如想要在低版本的IE浏览器和最新的Chrome浏览器中呈现的程序，往往需要更多的兼容性。<br><a id="more"></a></p>
+<p>编写Web程序实际上是为了更加广阔的使用程序，但是，由于不同浏览器，不同平台下的表现各不相同，在这种情况下，客户端检测就作为一个很关键的部分而存在，它决定了我们编写的程序对于不同平台的展现程度，比如想要在低版本的IE浏览器和最新的Chrome浏览器中呈现的程序，往往需要更多的兼容性。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="能力检测"><a href="#能力检测" class="headerlink" title="能力检测"></a>能力检测</h2><p>能力检测是最为广泛接受的客户端检测方式，又称特性检测，通过检测客户端是否能够支持某一个方法来判断我们接下来的执行脚本的执行状态。采用这种方式不用关心浏览器如何，只要能够支持这个方法，那么我们的脚本就可以执行。</p>
 <p>举例来说，IE5之前不支持document.getElementById这个方法，那么我们就可以判断这个方法是否存在，然后再执行代码，这样就可以让我们之后的脚本正常执行。</p>
 <p>需要注意的一点是，浏览器对这个特性的支持可能不符合我们的预期，比如我们希望的document.getElementById方法是一个函数，但是可能在某个浏览器中它是以属性的形式存在的，所以单纯的判断是否存在是不够的，还需要typeof操作符来判断这个属性是不是函数。</p>

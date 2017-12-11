@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/06/JS高程-第十六章-HTML5脚本编程/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="HTML5除了对DOM进行了扩展，也定义了很多新HTML标记。为了配合这些标记的变化，HTML5规范也用显著蝙蝠定义了很多JavaScript API。定义这些API的用意就是简化此前实现起来苦难重重的人物，最终简化创建动态Web界面的工作。">
-<meta property="og:updated_time" content="2017-11-16T14:12:06.253Z">
+<meta property="og:updated_time" content="2017-12-11T16:40:15.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第十六章 HTML5脚本编程">
 <meta name="twitter:description" content="HTML5除了对DOM进行了扩展，也定义了很多新HTML标记。为了配合这些标记的变化，HTML5规范也用显著蝙蝠定义了很多JavaScript API。定义这些API的用意就是简化此前实现起来苦难重重的人物，最终简化创建动态Web界面的工作。">
@@ -175,8 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>HTML5除了对DOM进行了扩展，也定义了很多新HTML标记。为了配合这些标记的变化，HTML5规范也用显著蝙蝠定义了很多JavaScript API。定义这些API的用意就是简化此前实现起来苦难重重的人物，最终简化创建动态Web界面的工作。<br><a id="more"></a></p>
+<p>HTML5除了对DOM进行了扩展，也定义了很多新HTML标记。为了配合这些标记的变化，HTML5规范也用显著蝙蝠定义了很多JavaScript API。定义这些API的用意就是简化此前实现起来苦难重重的人物，最终简化创建动态Web界面的工作。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="跨文档消息传递"><a href="#跨文档消息传递" class="headerlink" title="跨文档消息传递"></a>跨文档消息传递</h2><p>跨文档消息传送(cross-document messageing)，有时候建成为XDM，指的是在来自不同域的页面间传递消息。在XDM机制出现之前，要稳妥地实现这种通信需要花很多功夫。XDM把这种机制规范化，让我们能既稳妥又简单地实现跨文档通信。</p>
 <p>XDM的核心是postMessage方法。在HTML5规范中，除了XDM不否认之外的其他部分也会提到这个方法名，但都是为了同一个目的：向另一个地方传递数据。对于XDM而言，“另一个地方”指的是包含在当前页面中的iframe元素，或者由当前页面弹出的窗口。</p>
 <p>postMessage方法接收两个参数：一套消息和一个表示消息接收方来自那个域的字符串。</p>

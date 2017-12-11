@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/05/JS高程-第十五章-使用Canvas绘图/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="不用说，H5添加的最受欢迎的功能就是canvas元素。这个元素负责在页面中设定一个区域，然后就可以通过JavaScript动态地在这个区域绘制图像。canvas元素最早是由苹果公司推出，很快H5加入了这个元素，主流浏览器也迅速的开始支持它。与浏览器环境的其他组件类似，cancas由几组API构成，但并非所有浏览器都支持所有这些API，除了剧本基本绘图能力的2D上下文，canvas还建议了一个">
-<meta property="og:updated_time" content="2017-11-16T14:12:06.243Z">
+<meta property="og:updated_time" content="2017-12-11T16:39:54.689Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第十五章 使用Canvas绘图">
 <meta name="twitter:description" content="不用说，H5添加的最受欢迎的功能就是canvas元素。这个元素负责在页面中设定一个区域，然后就可以通过JavaScript动态地在这个区域绘制图像。canvas元素最早是由苹果公司推出，很快H5加入了这个元素，主流浏览器也迅速的开始支持它。与浏览器环境的其他组件类似，cancas由几组API构成，但并非所有浏览器都支持所有这些API，除了剧本基本绘图能力的2D上下文，canvas还建议了一个">
@@ -175,8 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>不用说，H5添加的最受欢迎的功能就是canvas元素。这个元素负责在页面中设定一个区域，然后就可以通过JavaScript动态地在这个区域绘制图像。canvas元素最早是由苹果公司推出，很快H5加入了这个元素，主流浏览器也迅速的开始支持它。与浏览器环境的其他组件类似，cancas由几组API构成，但并非所有浏览器都支持所有这些API，除了剧本基本绘图能力的2D上下文，canvas还建议了一个名为WebGL的3D上下文。目前所有支持该元素的浏览器都支持2D上下文，但是对WebGl的支持还不够好。<br><a id="more"></a></p>
+<p>不用说，H5添加的最受欢迎的功能就是canvas元素。这个元素负责在页面中设定一个区域，然后就可以通过JavaScript动态地在这个区域绘制图像。canvas元素最早是由苹果公司推出，很快H5加入了这个元素，主流浏览器也迅速的开始支持它。与浏览器环境的其他组件类似，cancas由几组API构成，但并非所有浏览器都支持所有这些API，除了剧本基本绘图能力的2D上下文，canvas还建议了一个名为WebGL的3D上下文。目前所有支持该元素的浏览器都支持2D上下文，但是对WebGl的支持还不够好。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><p>要使用canvas元素，必须先设置其width和height属性，指定款恶意绘图的区域大小。出现在开始喝结束标签中的内容是后背信息，如果浏览器不支持canvas元素，就会显示这些信息。</p>
 <p>使用canvas元素之前，需要检测绘图上下文对象是否存在，也就是getContext方法是否存在。使用toDataUrl可以导出canvas元素上绘制图像。这个方法接受一个参数，即图像的MIME类型，而且适合于创建图像的任何上下文。</p>
 <h2 id="2D上下文"><a href="#2D上下文" class="headerlink" title="2D上下文"></a>2D上下文</h2><p>使用2D绘图上下文提供的方法，可以绘制简单的2D图形，比如矩形、弧线和路径。2D上下文的坐标开始于canvas元素的左上角，原点坐标是(0,0)。所有的坐标值都基于这个原点计算，x值越大表示越靠右，y值越大表示越靠下。默认情况下width和height表示水平和垂直方向上可用的像素数目。</p>

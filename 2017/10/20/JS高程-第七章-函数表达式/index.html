@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/20/JS高程-第七章-函数表达式/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="函数表达式是再JavaScript中是一个很强大的特性。前文中曾经提过，有两种定义函数的方式，函数声明与函数表达式。函数声明就是像正常定义一个函数的方式来声明一个函数，函数表达式方式则是将函数赋给一个变量，我们之前提过一个概念叫做函数声明提升，即解释器会将所有函数声明提到最前方，让函数再任意地方调用都没有问题，但是函数表达式的方式的方式则不会进行函数声明提升，这种方式创建的函数叫做匿名函数，因为f">
-<meta property="og:updated_time" content="2017-10-20T16:08:18.194Z">
+<meta property="og:updated_time" content="2017-12-11T16:38:43.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第七章 函数表达式">
 <meta name="twitter:description" content="函数表达式是再JavaScript中是一个很强大的特性。前文中曾经提过，有两种定义函数的方式，函数声明与函数表达式。函数声明就是像正常定义一个函数的方式来声明一个函数，函数表达式方式则是将函数赋给一个变量，我们之前提过一个概念叫做函数声明提升，即解释器会将所有函数声明提到最前方，让函数再任意地方调用都没有问题，但是函数表达式的方式的方式则不会进行函数声明提升，这种方式创建的函数叫做匿名函数，因为f">
@@ -174,7 +174,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>函数表达式是再JavaScript中是一个很强大的特性。前文中曾经提过，有两种定义函数的方式，函数声明与函数表达式。函数声明就是像正常定义一个函数的方式来声明一个函数，函数表达式方式则是将函数赋给一个变量，我们之前提过一个概念叫做函数声明提升，即解释器会将所有函数声明提到最前方，让函数再任意地方调用都没有问题，但是函数表达式的方式的方式则不会进行函数声明提升，这种方式创建的函数叫做匿名函数，因为function关键字之后没有函数名标识符。匿名函数也叫做lamda表达式。<br><a id="more"></a></p>
+        <p>函数表达式是再JavaScript中是一个很强大的特性。前文中曾经提过，有两种定义函数的方式，函数声明与函数表达式。函数声明就是像正常定义一个函数的方式来声明一个函数，函数表达式方式则是将函数赋给一个变量，我们之前提过一个概念叫做函数声明提升，即解释器会将所有函数声明提到最前方，让函数再任意地方调用都没有问题，但是函数表达式的方式的方式则不会进行函数声明提升，这种方式创建的函数叫做匿名函数，因为function关键字之后没有函数名标识符。匿名函数也叫做lamda表达式。</p>
+<a id="more"></a>
 <h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归函数就是函数不断调用自身来实现某种功能，比如求阶乘，斐波那契数列等。但是请看下列代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function factorial(num) &#123;</span><br><span class="line">    if (num &lt; 1&gt;) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return num*factorial(num-1);</span><br><span class="line">&#125;</span><br><span class="line">var anotherFactorial = factorial;</span><br><span class="line">factorial = null;</span><br><span class="line">alert(anotherFactorial(4)) //出错!</span><br></pre></td></tr></table></figure>
 <p>在上面的例子中，首先定义了一个递归函数用来求阶乘，然后将函数赋给另外一个函数，将原函数释放，调用这个新函数，因为在递归函数内部必须调用原函数，但是原函数已经被释放，由此导致的错误，此时就可以使用callee方法解决这个问题。</p>

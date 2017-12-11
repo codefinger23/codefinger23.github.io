@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/07/JS高程-第十七章-错误处理与调试/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="由于JavaScript本身是动态语言，而且多年来一直没有固定的开发工具，因此人们普遍认为它是一种最难于调试的编程语言。当然，现在用来写JavaScript比较优秀的就是WebStorm。在当时，脚本出错时，浏览器通常会给出类似“object expected”这样的消息，没有说行细纹信息，让人摸不着头脑。ECMAScript第三版致力于解决这个问题。专门引入了try-catch和thro">
-<meta property="og:updated_time" content="2017-11-16T14:12:06.231Z">
+<meta property="og:updated_time" content="2017-12-11T16:39:24.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第十七章 错误处理与调试">
 <meta name="twitter:description" content="由于JavaScript本身是动态语言，而且多年来一直没有固定的开发工具，因此人们普遍认为它是一种最难于调试的编程语言。当然，现在用来写JavaScript比较优秀的就是WebStorm。在当时，脚本出错时，浏览器通常会给出类似“object expected”这样的消息，没有说行细纹信息，让人摸不着头脑。ECMAScript第三版致力于解决这个问题。专门引入了try-catch和thro">
@@ -177,6 +177,7 @@
         <blockquote>
 <p>由于JavaScript本身是动态语言，而且多年来一直没有固定的开发工具，因此人们普遍认为它是一种最难于调试的编程语言。当然，现在用来写JavaScript比较优秀的就是WebStorm。在当时，脚本出错时，浏览器通常会给出类似“object expected”这样的消息，没有说行细纹信息，让人摸不着头脑。ECMAScript第三版致力于解决这个问题。专门引入了try-catch和throw语句以及一些错误类型，已在让开发人员能够适当地处理错误。几年之后，Web浏览器中也出现了一些JavaScript调试程序和工具。在又了语言特性和工具支持之后，现在的开发人员已经能够适当地实现错误处理，并且能够找到错误的根源。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="浏览器报告的错误"><a href="#浏览器报告的错误" class="headerlink" title="浏览器报告的错误"></a>浏览器报告的错误</h2><p>IE、Firefox、Safari、Chrome和Opera等主流浏览器，都具有某种向用户报告JavaScript错误的机制。默认情况下，所有浏览器都会隐藏此类信息，毕竟除了开发人员之外，很少有人关心这些内容。因此，在基于浏览器编写JavaScript脚本时，别忘了启用浏览器的JavaScript报告功能，以便及时收到错误通知。</p>
 <h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>错误处理程序在程序设计中的重要性时毋庸置疑的。任何有影响力的Web应用程序都需要一套完善的错误处理机制，当然，大多数佼佼者确实做到了这一点，但通常只有服务器端应用程序才能做到如此。实际上，服务器端团队往往会在错误处理机制上投入较大的精力，通常要考虑按照类型、频率，或者其他重要的标准对错误进行分类。这样一来，开发人员就能够理解用户在使用简单数据库查询或者报告生成脚本时，应用程序可能出现的问题。</p>
 <p>虽然客户端应用程序的错误处理也同样重要，但真正收到重视，还是最近几年的事。实际上，我们要面对这样一个不争的事实：使用Web的绝大多数人都不是技术高手，其中甚至有很多人根本就不明白浏览器到底是什么，更不用说让他们说喜欢哪一个了。</p>

@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/02/JS高程-第十二章-DOM2和DOM3/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="DOM作为JS操作文档的接口，经过了很长时间的发展，提供了更加丰富的功能，除了前一章对于规范的扩展，也有DOM自身的升级，这其中值得说的就是DOM2和DOM3的升级。DOM1主要定义的是HTML和XML文档的底层结构。DOM2和DOM3级则在这个结构的基础上引入了更多的交互能力，也支持更高级的XML特性。为此DOM2和DOM3级分为许多模块，分别描述DOM某个非常具体的子集。">
-<meta property="og:updated_time" content="2017-11-16T14:10:14.253Z">
+<meta property="og:updated_time" content="2017-12-11T16:39:43.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第十二章 DOM2和DOM3">
 <meta name="twitter:description" content="DOM作为JS操作文档的接口，经过了很长时间的发展，提供了更加丰富的功能，除了前一章对于规范的扩展，也有DOM自身的升级，这其中值得说的就是DOM2和DOM3的升级。DOM1主要定义的是HTML和XML文档的底层结构。DOM2和DOM3级则在这个结构的基础上引入了更多的交互能力，也支持更高级的XML特性。为此DOM2和DOM3级分为许多模块，分别描述DOM某个非常具体的子集。">
@@ -175,8 +175,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>DOM作为JS操作文档的接口，经过了很长时间的发展，提供了更加丰富的功能，除了前一章对于规范的扩展，也有DOM自身的升级，这其中值得说的就是DOM2和DOM3的升级。DOM1主要定义的是HTML和XML文档的底层结构。DOM2和DOM3级则在这个结构的基础上引入了更多的交互能力，也支持更高级的XML特性。为此DOM2和DOM3级分为许多模块，分别描述DOM某个非常具体的子集。<br><a id="more"></a></p>
+<p>DOM作为JS操作文档的接口，经过了很长时间的发展，提供了更加丰富的功能，除了前一章对于规范的扩展，也有DOM自身的升级，这其中值得说的就是DOM2和DOM3的升级。DOM1主要定义的是HTML和XML文档的底层结构。DOM2和DOM3级则在这个结构的基础上引入了更多的交互能力，也支持更高级的XML特性。为此DOM2和DOM3级分为许多模块，分别描述DOM某个非常具体的子集。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="DOM变化"><a href="#DOM变化" class="headerlink" title="DOM变化"></a>DOM变化</h2><p>DOM2和DOM3的目的在于扩展DOM API，以满足XML的所有需求。DOM2没有引入新类型，只是在DOM1的基础上增加新方法和新属性来增强既有类型。DOM3既增强了既有类型，也引入了新类型。</p>
 <h3 id="针对命名空间的变化"><a href="#针对命名空间的变化" class="headerlink" title="针对命名空间的变化"></a>针对命名空间的变化</h3><p>名空间：namespace，有了命名空间，不同XML文档的元素就可以混合在一起，构成格式良好的文档，不必担心命名冲突，这一点其实和C++的名空间类似。命名空间使用xmlns特性来表示，XHTML的命名空间是<a href="http://www.w3.org/1999/xhtml。在任何格式良好的XHTML页面中，都应该包含在" target="_blank" rel="noopener">http://www.w3.org/1999/xhtml。在任何格式良好的XHTML页面中，都应该包含在</a><html>元素中，如下所示：</html></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;Example XHTML page&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        Hello World!</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>

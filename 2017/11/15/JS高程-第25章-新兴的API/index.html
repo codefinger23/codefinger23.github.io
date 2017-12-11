@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS高程 第25章 新兴的API | CodeFinger</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。  requestAnimationFrame很长时间以来，计时器和循环间隔一直都是JavaScript动画的最核心技术。">
+  <meta name="description" content="随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。">
 <meta name="keywords" content="读书笔记,JavaScript高级程序设计">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS高程 第25章 新兴的API">
 <meta property="og:url" content="http://yoursite.com/2017/11/15/JS高程-第25章-新兴的API/index.html">
 <meta property="og:site_name" content="CodeFinger">
-<meta property="og:description" content="随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。  requestAnimationFrame很长时间以来，计时器和循环间隔一直都是JavaScript动画的最核心技术。虽然CSS变换及动画为Web开发人员提供了实现动画的简单手段，但JavaScr">
-<meta property="og:updated_time" content="2017-11-16T14:12:06.226Z">
+<meta property="og:description" content="随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。">
+<meta property="og:updated_time" content="2017-12-11T16:38:27.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第25章 新兴的API">
-<meta name="twitter:description" content="随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。  requestAnimationFrame很长时间以来，计时器和循环间隔一直都是JavaScript动画的最核心技术。虽然CSS变换及动画为Web开发人员提供了实现动画的简单手段，但JavaScr">
+<meta name="twitter:description" content="随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。">
   
     <link rel="alternative" href="/atom.xml" title="CodeFinger" type="application/atom+xml">
   
@@ -177,6 +177,7 @@
         <blockquote>
 <p>随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a>requestAnimationFrame</h2><p>很长时间以来，计时器和循环间隔一直都是JavaScript动画的最核心技术。虽然CSS变换及动画为Web开发人员提供了实现动画的简单手段，但JavaScript动画开发领域的状况这些年来并没有大的变化。</p>
 <h3 id="早期动画循环"><a href="#早期动画循环" class="headerlink" title="早期动画循环"></a>早期动画循环</h3><p>在JavaScript中创建动画的典型方式，就是使用setInterval方法来控制所有动画。</p>
 <h3 id="循环间隔问题"><a href="#循环间隔问题" class="headerlink" title="循环间隔问题"></a>循环间隔问题</h3><p>知道什么时候绘制下一帧是保证动画平滑的关键。然而，直至最近，开发人员都没有办法确保浏览器按时绘制下一帧。随着canvas元素越来越流行，新的基于浏览器的游戏也崭露头脚，面对不十分精确的setInterval和setTimeout。</p>

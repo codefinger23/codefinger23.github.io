@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="上一章讲述了文档对象模型(DOM)的基础内容，虽然已经足够强大，但是在使用过程中仍然显得不方便，因此各浏览器厂商为了凸显自己产品的强大，添加了对于DOM API的扩展，W3C已经着手将一些专有扩展标准化，以便降低各个浏览器之间的不同。这其中两个主要的扩展是Selectors API和HTML5。">
 <meta property="og:image" content="https://codefinger.cn/wp-content/uploads/2017/11/Screen-Shot-2017-11-01-at-23.07.10.png">
-<meta property="og:updated_time" content="2017-11-16T14:10:14.217Z">
+<meta property="og:updated_time" content="2017-12-11T16:39:18.508Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第十一章 DOM扩展">
 <meta name="twitter:description" content="上一章讲述了文档对象模型(DOM)的基础内容，虽然已经足够强大，但是在使用过程中仍然显得不方便，因此各浏览器厂商为了凸显自己产品的强大，添加了对于DOM API的扩展，W3C已经着手将一些专有扩展标准化，以便降低各个浏览器之间的不同。这其中两个主要的扩展是Selectors API和HTML5。">
@@ -177,8 +177,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>上一章讲述了文档对象模型(DOM)的基础内容，虽然已经足够强大，但是在使用过程中仍然显得不方便，因此各浏览器厂商为了凸显自己产品的强大，添加了对于DOM API的扩展，W3C已经着手将一些专有扩展标准化，以便降低各个浏览器之间的不同。这其中两个主要的扩展是Selectors API和HTML5。<br><a id="more"></a></p>
+<p>上一章讲述了文档对象模型(DOM)的基础内容，虽然已经足够强大，但是在使用过程中仍然显得不方便，因此各浏览器厂商为了凸显自己产品的强大，添加了对于DOM API的扩展，W3C已经着手将一些专有扩展标准化，以便降低各个浏览器之间的不同。这其中两个主要的扩展是Selectors API和HTML5。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="选择符API-Selectors-API"><a href="#选择符API-Selectors-API" class="headerlink" title="选择符API(Selectors API)"></a>选择符API(Selectors API)</h2><p>众多JavaScript库中最常用的一项功能就是根据CSS选择符选择与某个模式匹配的DOM元素，实际上JQuery的核心就是通过CSS选择符查询DOM文档以取得某个元素的引用，从而抛开getElementById和getElementByTagName的使用，Selectors API就是W3C发起制订的一个标准，通过原生的浏览器支持，极大的提升性能，最主要的就是两个方法querySelector和querySelectorAll。</p>
 <ul>
 <li>querySelector: 该方法接受一个CSS选择符，返回与该模式匹配的第一个元素，如果没有找到，返回null。</li>

@@ -151,6 +151,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java编程思想-第6章-访问权限控制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/Java编程思想-第6章-访问权限控制/">Java编程思想 第6章 访问权限控制</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/21/Java编程思想-第6章-访问权限控制/" class="archive-article-date">
+  	<time datetime="2017-11-21T14:45:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>访问控制(或隐藏实现具体)与“最初实现并不恰当”有关</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2017/11/21/Java编程思想-第6章-访问权限控制/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/21/Java编程思想-第6章-访问权限控制/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java编程思想-第5章-初始化和清理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -584,46 +666,9 @@
         <blockquote>
 <p>随着HTML5的出现，面向未来Web应用的JavaScript API也得到了极大的发展。这些API没有包含在HTML5规范中，而是各自有各自的规范。但是，他们都属于“HTML5相关的API”。</p>
 </blockquote>
-<h2 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a>requestAnimationFrame</h2><p>很长时间以来，计时器和循环间隔一直都是JavaScript动画的最核心技术。虽然CSS变换及动画为Web开发人员提供了实现动画的简单手段，但JavaScript动画开发领域的状况这些年来并没有大的变化。</p>
-<h3 id="早期动画循环"><a href="#早期动画循环" class="headerlink" title="早期动画循环"></a>早期动画循环</h3><p>在JavaScript中创建动画的典型方式，就是使用setInterval方法来控制所有动画。</p>
-<h3 id="循环间隔问题"><a href="#循环间隔问题" class="headerlink" title="循环间隔问题"></a>循环间隔问题</h3><p>知道什么时候绘制下一帧是保证动画平滑的关键。然而，直至最近，开发人员都没有办法确保浏览器按时绘制下一帧。随着canvas元素越来越流行，新的基于浏览器的游戏也崭露头脚，面对不十分精确的setInterval和setTimeout。</p>
-<h2 id="Page-Visibility-API"><a href="#Page-Visibility-API" class="headerlink" title="Page Visibility API"></a>Page Visibility API</h2><p>不知道用户是不是正在与页面交互，这是困扰广大Web开发人员的一个主要问题。如果页面最小化了或者隐藏在了其他标签页后面，那么有些功能是可以停下来的，比如轮询服务器或者某些动画效果。而Page Visibvility API就是为了让开发人员知道页面是否对用户可见而推出的。</p>
-<p>这个API本身非常简单，由以下三部分组成：</p>
-<ul>
-<li>document.hidden: 表示页面是否隐藏的布尔值。页面隐藏包括页面在后台标签页中或者浏览器最小化。</li>
-<li>document.visibilityState: 表示4个可能的状态的值<blockquote>
-<ul>
-<li>页面在后台标签页中或浏览器最小化</li>
-<li>页面在前台标签页中</li>
-<li>实际的页面已经隐藏，但用户可以看到页面的预览</li>
-<li>页面在屏幕外执行预渲染处理</li>
-</ul>
-</blockquote>
-</li>
-<li>visibilitychange时间：当文档从可见变为不可见或从不可见变为可见时，触发该事件。</li>
-</ul>
-<h2 id="Geolocation-API"><a href="#Geolocation-API" class="headerlink" title="Geolocation API"></a>Geolocation API</h2><p>地理定位是最令人兴奋，而且得到了广泛支持的一个新API。通过这套API，JavaScript代码能够访问到用户的当前位置信息。当然，访问之前必须得到用户的明确许可，即同意在页面中共享其位置信息。如果页面尝试访问地理定位信息，浏览器就会显示一个对话框，请求用户许可共享其位置信息。</p>
-<h2 id="File-API"><a href="#File-API" class="headerlink" title="File API"></a>File API</h2><p>不能直接访问用户计算机中的文件，一直都是Web应用开发中的一大障碍。2000年以前，处理文件的唯一方式就是在表单中加入input type=”file” 字段，仅此而已。File API 的宗旨是为Web开发人员提供一种安全的方式，以便在客户端访问用户计算机中的文件，并更好地对这些文件执行操作。</p>
-<p>File API在表单中的文件输入字段的基础上，又添加了一些直接访问文件信息的接口。H5在DOM中为文件输入元素添加了一个files集合。在通过文件输入字段选择了一或多个文件时，files集合中将包含一组File对象对应着一个文件。每个File对象都有下列只读属性。</p>
-<ul>
-<li>name: 本地文件系统中的文件名。</li>
-<li>size：文件的字节大小。</li>
-<li>type：字符串，文件的MIME类型</li>
-<li>lastModifiedDate：字符串，文件上一次被修改的事件。</li>
-</ul>
-<h3 id="FileReader类型"><a href="#FileReader类型" class="headerlink" title="FileReader类型"></a>FileReader类型</h3><p>FileReader类型实现的额时一种异步文件读取机制。可以把FileReader想象成XMLHttpRequest，区别只是它读取的是文件系统，而不是远程服务器。为了读取文件中的数据，FileReader提供了如下几个方法：</p>
-<ul>
-<li>readAsText(file, encoding): 以纯文本形式读取文件，将读取文本保存在result属性中。第二个参数用于指定编码类型，是可选的。</li>
-<li>readAsDataURL(file): 读取文件并将文件以数据URI的形式保存在result属性中</li>
-<li>readAsBinaryString(file): 读取文件并将一个字符串保存在result属性中，字符串中的每个字符表示一字节。</li>
-<li>readAsArrayBuffer(file): 读取文件并将一个包含文件内容的ArrayBuffer保存在result属性中。</li>
-</ul>
-<h3 id="读取部分内容"><a href="#读取部分内容" class="headerlink" title="读取部分内容"></a>读取部分内容</h3><p>有时候，我们只想读取文件的一部分而不是全部内容。为此，File对象还支持一个slice方法。这个方法接收两个参数：起始字节及要读取的字节数。这个方法返回一个Blob的实例，Blob是File类型的父类型。</p>
-<h3 id="对象URL"><a href="#对象URL" class="headerlink" title="对象URL"></a>对象URL</h3><p>对象URL也被称为blob URL，指的是引用保存在File或Blob中数据的URL。使用对象URL的好处是可以不必把文件内容读取到JavaScript中而直接使用文件内容。为此，只要在需要文件内容的地方提供对象URL即可。</p>
-<h2 id="Web-计时"><a href="#Web-计时" class="headerlink" title="Web 计时"></a>Web 计时</h2><p>页面性能一直是Web开发人员最关注的领域。但直至最近，度量页面性能指标的唯一方式，就是提高代码复杂度和巧妙地使用JavaScript的Date对象。Web Timing API改变了这个局面，让开发人员通过JavaScript就能使用浏览器内部的度量结果，通过直接读取这些信息可以做任何想做的分析。</p>
-<h2 id="Web-Workers"><a href="#Web-Workers" class="headerlink" title="Web Workers"></a>Web Workers</h2><p>随着Web应用复杂性的与日俱增，越来越复杂的计算在所难免。长时间运行的JavaScript进程会导致浏览器冻结用户界面，让人感觉屏幕冻结了。Web Workers规范通过让JavaScript在后台运行解决了这个问题。浏览器实现Web Workers规范的方式有很多种，可以使用线程、后台进程或者运行在其他处理器核心上的进程。具体的实现细节其实没有那么重要，重要的是开发人员现在可以放心地运行JavaScript，而不必担心会影响用户体验了。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>与HTML5同时兴起的是另外一批JavaScript API。从技术规范角度讲，这批API不属于HTML5，但从整体上可以称它们为HTML5 JavaScript API。这些API的标准有不少虽然还在制定当中，但已经得到了浏览器广泛支持。</p>
-
+        
+          <a class="article-more-a" href="/2017/11/15/JS高程-第25章-新兴的API/#more">more >></a>
+        
       
 
       
@@ -703,28 +748,9 @@
         <blockquote>
 <p>自从2000年以来，Web开发方面的种种规范、条例正在高速发展。Web开发过去曾是荒芜地带，里面东西还都凑合，而现在已经眼花成了完整的研究规范，并建立了种种最佳实践。随着简单的网站成长为更加复杂的Web应用，同时Web爱好者成为了有收入的专业人士，Web开发的世界充满了各种关于最新技术和开发方法的信息。尤其是JavaScript，它从大量的研究和推断中获益。JavaScript的最佳实践分成若干类，并在开发过程的不同点进行处理。</p>
 </blockquote>
-<h2 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h2><p>注意可维护的代码的概念并不是JavaScript特有的。这里的很多概念都可以广泛应用于各种编程语言，当然也有某些特定于JavaScript的概念。</p>
-<ul>
-<li>可维护的代码：具有可理解性，直观性，可适应性，可扩展性，可调试性。</li>
-<li>代码约定：遵守代码约定，增加代码可读性，增加对于代码的接受能力。</li>
-<li>松散耦合：解耦HTML/JavaScirpt，解耦CSS/JavaScript，解耦应用逻辑/事件处理程序。</li>
-<li>编程实践：尊重对象所有权，避免全局变量，避免与null进行比较，使用常量</li>
-</ul>
-<h2 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h2><p>因为JavaScript最初是一个解释型语言，执行速度要比编译型语言慢得多。Chrome是第一款内置优化引擎，将JavaScirpt编译成本地代码的浏览器。即使到了编译执行JavaScript的新阶段，仍然会存在低效率的代码。不过，还是有一些方式可以改进代码的整体性能。</p>
-<ul>
-<li>注意作用域：避免全局查找，避免with语句。</li>
-<li>选择正确的方法：避免不必要的属性查找，优化循环，展开循环，避免双重解释</li>
-<li>最小化语句数：多个变量声明，插入迭代值，使用数组和对象字面量</li>
-<li>优化DOM交互：最小化现场更新，使用innerHTML，使用事件代理，注意HTMLCollection</li>
-</ul>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>JavaScript解决方案最重要的部分，便是最后部署到运营中的网站或者是Web应用的过程。在这之前可能做了相当多的工作，为普通的使用进行架构并优化一个解决方案。</p>
-<ul>
-<li>构建过程：构建过程能够整体改变代码结构，因为它并非是编译型语言。</li>
-<li>验证：通过JavaScript的IDE可以进行简单的语法验证。</li>
-<li>压缩：由于代码长度和配重的存在，所以对JavaScript文件进行压缩可以有效提高传输效率。</li>
-</ul>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>随着JavaScript开发的成熟，也出现了很多最佳实践。过去一度认为只是一种爱好的东西现在变成了正当职业，同时还需要经历过去其他编程语言要做的一些研究，如可维护性、性能和部署。</p>
-
+        
+          <a class="article-more-a" href="/2017/11/14/JS高程-第24章-最佳实践/#more">more >></a>
+        
       
 
       
@@ -804,17 +830,9 @@
         <blockquote>
 <p>支持离线Web应用开发时HTML5的另一个重点。所谓离线Web应用，就是在设备不能上网的情况下仍然可以运行的应用。HTML5把离线应用作为重点，主要基于开发人员的心愿。前端开发人员一直希望Web应用能够与传统的客户端应用通常竞技，起码做到只要设备有电就能使用。</p>
 </blockquote>
-<h2 id="离线检测"><a href="#离线检测" class="headerlink" title="离线检测"></a>离线检测</h2><p>开发离线应用的第一步是要知道设备是在线还是离线，HTML5为此定义了一个navigator.onLine属性，这个属性值为true表示设备能上网，值为false表示设备离线。这个属性的关键是浏览器必须知道设备能够访问网络，从而返回正确的值。</p>
-<h2 id="应用缓存"><a href="#应用缓存" class="headerlink" title="应用缓存"></a>应用缓存</h2><p>HTML5的应用缓存(application cache)，或者简称为appcache，是专门为开发离线Web应用而设计的。Appcache就是从浏览器的缓存中分出来的一块缓存区。要想在这个缓存中保存数据，可以使用一个描述文件(manifest file)，列出要下载和缓存的资源。</p>
-<h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><p>随着Web应用程序的出现，也产生了对于能够直接在客户端上存储用户信息能力的要求。想法很合乎逻辑，属于某个特定用户的信息应该存在该用户的机器上。无论是登录信息、偏好设定或其他数据，Web应用提供者发现他们在找各种方式将存在客户端上。这个问题的第一个方案是以cookie的形式出现的。今天，cookie只是在客户端存储数据的其中一种方式。</p>
-<ul>
-<li>Cookie：HTTP Cookie，通常直接叫做cookie，最初是在客户端用于存储会话信息。该标准要求服务器对任意HTTP请求发送Set-Cookie HTTP头作为响应的一部分，其中包含会话信息。</li>
-<li>IE用户数据：在IE5.0中，微软通过一个自定义行为引入了持久化用户数据的概念。用户数据允许每个文档最多128KB数据，每个域名最多1MB数据。</li>
-<li>Web存储机制：Web Storage最早是在Web超文本应用技术工作组(WHAT-WG)的Web应用1.0规范中描述的。这个规范的最初的工作最终成为了HTML5的一部分。Web Storage的目的是客户由cookie带来的一些限制，当数据需要被严格控制在客户端上时，无须持续地将数据发回服务器。Web Storage的两个主要目标是：提供一种在cookie之外存储会话数据的途径；提供一种存储大量可以跨会话存在的数据的机制。</li>
-<li>IndexedDB：Indexed Database API，或者简称为IndexedDB，是在浏览器中保存结构化数据的一种数据库。IndexedDB的思想是创建一套API，方便保存和读取JavaScript对象，同时还支持查询及搜索。IndexedDB设计的操作完全是异步进行的。因此，大多数操作会以请求方式进行，但这些操作会在后期执行，然后如果成功返回结果，如果失败则返回错误。差不多每一次IndexedDB操作，都需要你注册onerror或onsuccess事件处理程序，以确保适当地处理结果。</li>
-</ul>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>离线Web应用和客户端存储数据的能力对未来的Web应用越来越重要。浏览器已经能够检测到用户是否离线，并触发JavaScript事件以便应用做出处理。可以指定个在应用缓存中保存哪些文件以便离线时使用。对于应用缓存的状态及变化，也有相应的JavaScriptAPI可以调用检测。</p>
-
+        
+          <a class="article-more-a" href="/2017/11/13/JS高程-第23章-离线应用与客户端存储/#more">more >></a>
+        
       
 
       
@@ -894,34 +912,9 @@
         <blockquote>
 <p>JavaScript是一种及其灵活的语言，具有多种使用风格。一般来说，编写JavaScript要么使用过程方式，要么使用面向对象方式。然而，由于它天生的动态属性，这种语言还嫩供食用更为复杂和有趣的模式。这些技巧要利用ECMAScript的语言特点、BOM扩展和DOM功能来获得强大的效果。</p>
 </blockquote>
-<h2 id="高级函数"><a href="#高级函数" class="headerlink" title="高级函数"></a>高级函数</h2><p>函数的本质十分简单和过程化，但是也可以非常复杂和动态。一些额外的功能可以通过使用闭包来实现。此外，由于所有的函数都是对象，所以使用函数指针非常简单。</p>
-<h3 id="安全的类型检测"><a href="#安全的类型检测" class="headerlink" title="安全的类型检测"></a>安全的类型检测</h3><p>JavaScript内置的类型检测机制并非完全可靠，由于一些无法预知的行为，经常会导致检测数据类型得到不靠谱的结果。解决这个问题的办法是：通过调用Object原生的toString方法，该方法返回一个[object NativeConstructorName] 格式的字符串。每个类在内部都有一个[[Class]]属性，这个属性中就指定了上述字符串中的构造函数名。</p>
-<h3 id="作用域安全的构造函数"><a href="#作用域安全的构造函数" class="headerlink" title="作用域安全的构造函数"></a>作用域安全的构造函数</h3><p>构造函数实际上就是一个使用new操作符调用的函数。当使用new调用时，构造函数内用到的this对象会指向新创建的对象实例。这就导致了，当在没有使用new操作符调用该构造函数时，会将this绑定到全局对象上，导致错误对象属性的以为增加。避免这个问题的方式是，在进行任何改变前，首先确认this对象是正确类型的实例。如果不是，那么创建新的实例并返回。</p>
-<h3 id="惰性载入函数"><a href="#惰性载入函数" class="headerlink" title="惰性载入函数"></a>惰性载入函数</h3><p>因为浏览器之间行为的差异，多数JavaScirpt代码包含了大象的if语句。大量的进行if判断必然导致程序运行缓慢。解决这个问题的方案称之为惰性载入技巧，表示函数执行的分支只会发生一次。这里有两种实现惰性载入的方式。</p>
-<ol>
-<li>在函数被调用时再处理函数。在第一次调用的过程中，该函数会被覆盖为另外一个按合适方式执行的函数，这样任何对原函数的调用都不用再筋骨过执行的分支了。</li>
-<li>在声明函数时就指定适当的函数。这样，第一次调用函数时就不会损失性能，而在代码首次加载时损失一点性能。</li>
-</ol>
-<h3 id="函数绑定"><a href="#函数绑定" class="headerlink" title="函数绑定"></a>函数绑定</h3><p>函数绑定要创建一个函数，可以在特定的this环境中以指定参数调用另一个函数。该技巧常常和回调函数与事件处理程序一起使用，以便在将函数作为变量传递的同时保留代码执行环境。</p>
-<h3 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h3><p>与函数绑定紧密相关的主题是函数柯里化(function currying)，它用于创建已经设置好了一个或多个参数的函数。函数柯里化的基本方法和函数绑定是一样的：使用一个闭包返回一个函数。两者的区别在于，当函数被调用时，返回的函数还需要设置一些传入的参数。</p>
-<h2 id="防篡改对象"><a href="#防篡改对象" class="headerlink" title="防篡改对象"></a>防篡改对象</h2><p>JavaScript共享的本质一直是开发人员心头的同。因为任何对象都可以被在同一环境中运行的代码修改。开发人员很可能会意外地修改别人的代码，甚至更糟糕地，用不兼容的功能重写原生对象。ECMAScript5致力于解决这个问题，可以让开发人员定义防篡改对象。</p>
-<blockquote>
-<p>一旦把对象定义为防篡改，就无法撤销了。</p>
-</blockquote>
-<h3 id="不可扩展对象"><a href="#不可扩展对象" class="headerlink" title="不可扩展对象"></a>不可扩展对象</h3><p>默认情况下，所有的对象都是可以扩展。也就是说，任何时候都可以向对象中添加属性和方法。使用Object.prevetExtensions可以改变这个行为，让你不能再给对象添加属性和方法。在调用了这个方法之后，就不能给对象添加新属性和方法了。在非严格模式下，给对象添加新成员会导致静默失败，而在严格模式下，尝试不可扩展的对象添加新成员会导致抛出错误。</p>
-<p>另外，虽然不能给对象添加新成员，但已有的成员则丝毫不受影响。仍然还可以修改和删除已有的成员。</p>
-<h3 id="密封的对象"><a href="#密封的对象" class="headerlink" title="密封的对象"></a>密封的对象</h3><p>ECMAScript 5为对象定义的第二个保护级别是密封对象。密封对象不可扩展，而且已有成员的[[Configurable]]特性将被设置为false。要密封对象，可以使用Object.seal方法。</p>
-<p>在非严格模式下，尝试添加和删除密封对象的行为被静默忽略了。在严格模式下，这种行为都会导致抛出错误。</p>
-<h3 id="冻结的对象"><a href="#冻结的对象" class="headerlink" title="冻结的对象"></a>冻结的对象</h3><p>最严格的放篡改级别是冻结对象。冻结的对象既不可扩展，又是密封的，而且对象数据属性[[Writable]]特性设置为false。可以使用Object.freeze方法来冻结对象。</p>
-<h2 id="高级定时器"><a href="#高级定时器" class="headerlink" title="高级定时器"></a>高级定时器</h2><p>因为JavaScript是单线程的运行环境，因此定时器仅仅只是计划代码在未来的某个时间执行，执行时机是不能保证的。</p>
-<h3 id="重复的定时器"><a href="#重复的定时器" class="headerlink" title="重复的定时器"></a>重复的定时器</h3><p>使用setInterval创建的定时器确保了定时器代码规则地插入队列中。这个方式的问题在于定时器代码可能在代码再次被添加到队列之前还没有完成执行，结果导致定时器代码连续运行好几次，而之间没有任何停顿。通过JavaScript引擎的优化，可以避免这个问题。当使用setInterval时，仅当没有该定时器的任何其他代码实例时，才将定时器代码添加到队列中。这确保了定时器代码加入到队列中的最小时间间隔为指定间隔。</p>
-<h3 id="Yielding-Processes"><a href="#Yielding-Processes" class="headerlink" title="Yielding Processes"></a>Yielding Processes</h3><p>运行在浏览器中JavaScriptJavaScript都被分配了一个确定数量的资源。以防止恶意的Web程序员把用于的计算机搞挂了。其中一个限制是长时间运行脚本的制约，如果代码运行超过特定的事件或者特定语句数量就不让它继续执行。因此为了比避免这个问题。可以使用定时器分割这类循环操作。这是一种叫做数组分块的技术，小块小块地处理数组，通常每次一小块。基本思路是为要处理的项目创建一个队列，然后使用定时器取出下一个要处理的项目进行处理，接着再设置另一个定时器。</p>
-<h3 id="函数节流"><a href="#函数节流" class="headerlink" title="函数节流"></a>函数节流</h3><p>浏览器中某些计算和处理要比其他的昂贵很多。为了绕开这个问题，可以使用定时器对该函数进行节流。函数节流背后的基本思想是指，某些代码不可以在没有间断的情况连续重复执行。第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码。当第二次调用该函数时，它会清楚前一次的定时器并创建另一个。如果前一个定时器已经执行过了，这个操作就没有任何意义。</p>
-<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><p>事件是JavaScript与浏览器交互的主要途径。事件的本质就是观察者模式，因此可以通过自己实现观察者模式来实现自定义事件。</p>
-<h2 id="拖放"><a href="#拖放" class="headerlink" title="拖放"></a>拖放</h2><p>拖放是一种非常流行的用户界面模式。它的概念很简单：点击某个对象，并按住鼠标按钮不妨，将鼠标移动到另一个区域，然后释放鼠标按钮将对象放在这里。拖放功能也流行到Web上，成为了一些更创痛的配置界面的一种候选方案。</p>
-<p>拖放的基本概念很简单：创建一个绝对定位的元素，可以使用鼠标易懂。这个技术源自一种叫做鼠标拖尾的经典网页技巧。鼠标拖尾是一个或者多个图片在页面上跟着鼠标指针易懂。但元素鼠标拖尾的基本代码需要为文档设置一个onmousemove事件处理程序，它总是将指定元素移动到鼠标指针的位置。</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>JavaScript中的函数非常强大，因为他们是第一类对象。使用必报和函数环境切换，还可以有很多使用函数的强大方法。可以创建作用域安全的构造函数，确保在缺少new操作符时调用构造函数不会改变错误的环境对象。</p>
-
+        
+          <a class="article-more-a" href="/2017/11/12/JS高程-第22章-高级技巧/#more">more >></a>
+        
       
 
       
@@ -949,181 +942,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/12/JS高程-第22章-高级技巧/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS高程-第21章-Ajax和Comet" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/11/JS高程-第21章-Ajax和Comet/">JS高程 第21章 Ajax和Comet</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/11/JS高程-第21章-Ajax和Comet/" class="archive-article-date">
-  	<time datetime="2017-11-11T13:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>Ajax，是对Asynchrounous JavaScript + XML的简写。这一技术能够向服务器请求额外的数据而无需卸载页面，会带来更好的用户体验。这一技术改变自从Web诞生依赖就一直沿用的“单击，等待”的交互模式。Ajax技术核心是XMLHttpRequest对象，简称XHT，这是由微软首先引入的一个特性，其他浏览器提供商后来都提供了相同的实现。虽然名字中包含XML，但Ajax通信与数据格式无关；这种技术就是无须刷新页面即可从服务器取得数据，但不一定是XML数据。异步请求这种技术在Ajax出现之前就已经存在，不过那个时候叫做远程脚本，所以如果有人这么说，那必然是从业的老司机了。</p>
-</blockquote>
-<h2 id="XMLHttpRequest对象"><a href="#XMLHttpRequest对象" class="headerlink" title="XMLHttpRequest对象"></a>XMLHttpRequest对象</h2><p>微软是第一个引入XHR对象的浏览器，由于其他浏览器中对XHR的实现与IE最早的实现是兼容的，因此就可以在所有浏览器中都以相同的方式使用xhr对象。</p>
-<h3 id="XHR的用法"><a href="#XHR的用法" class="headerlink" title="XHR的用法"></a>XHR的用法</h3><p>使用XHR对象时，要调用的第一个方法是open，它接受3个参数：要发送的请求的类型(get,post等)、请求的URL和表示是否异步发送请求的布尔值。需要注意两点：</p>
-<ol>
-<li>URL相对于执行代码的当前域</li>
-<li>调用open这个方法并不会真正发送请求，而只是启动一个请求以备发送。</li>
-</ol>
-<p>要发送特定的请求，需要调用send方法，send方法接收一个参数，即要作为请求主体发送的数据。如果不需要通过请求主体发送数据，则必须传入null，因为这个参数对某些浏览器来说是必须的。在收到响应后，响应的数据会自动填充XHR对象的属性。</p>
-<ul>
-<li>responseText：作为响应主体返回的文本。</li>
-<li>responseXML：如果响应的内容类型是text/xml或application/xml，这个属性中将保存包含着响应数据的XML DOM文档。</li>
-<li>status：响应的HTTP状态。</li>
-<li>statusText：HTTP状态的说明。</li>
-</ul>
-<p>异步请求与同步请求不同，需要检测readyState属性，该属性表示请求/响应过程的当前活动阶段。这个属性的可取值如下：</p>
-<ul>
-<li>0:未初始化。尚未调用open方法。</li>
-<li>1:启动。已经调用open方法，但尚未调用send方法。</li>
-<li>2:发送。已经调用send方法，但尚未接收到响应。</li>
-<li>3:接收。已经接收到部分响应数据。</li>
-<li>4:完成。已经接收到全部响应数据，而且已经可以在客户端使用。</li>
-</ul>
-<p>只要readyState属性的值由一个值变成另一个值，都会触发一次readystatechange时间。可以利用这个事件来检测每次状态变化后readyState的值。</p>
-<p>另外，在接收到响应之前还可以调用abort方法来取消异步请求，调用这个方法后，XHR对象会停止触发事件，而且也不再允许访问任何与响应有关的对象属性。在终止请求之后，还应该对XHR对象进行解引用操作。</p>
-<h3 id="HTTP头部信息"><a href="#HTTP头部信息" class="headerlink" title="HTTP头部信息"></a>HTTP头部信息</h3><p>每个HTTP请求和响应都会带有相应的请求信息，其中有的对开发人员游泳，有的也没什么用。XHR对象也提供了操作这两种头部(即请求头部和响应头部)信息的方法。</p>
-<ul>
-<li>Accept:浏览器能够处理的内容类型。</li>
-<li>Accept-Charset：浏览器能够显示的字符集。</li>
-<li>Accept-Encoding：浏览器能够处理的压缩编码。</li>
-<li>Accept-Language：浏览器当前设置的语言。</li>
-<li>Connection：浏览器与服务器之前连接的类型。</li>
-<li>Cookie：当前页面设置的任何Cookie。</li>
-<li>Host：发出请求的页面所在的域。</li>
-<li>Referer：发出请求的页面的URI。注意，HTTP规范将这个头部字段拼写错了，而为了保证与规范一致，也只能将错就错了。</li>
-<li>User-Agent：浏览器的用户代理字符串。</li>
-</ul>
-<h3 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h3><p>GET请求经常发生的一个错误，就是查询字符串的格式有问题。查询字符串中每个参数的名称和值都必须使用encodeURIComponent进行编码，然后才能放到URL的末尾；而且所有键值对都必须是由&amp;字符分隔。</p>
-<h3 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h3><p>默认情况下，服务器对POST请求和提交Web表单的请求并不会一视同仁。因此，服务器端必须有程序来读取发送过来的原始数据，并从中解析出有用的部分。不过，可以使用XHR来模仿表单提交：首先将Content-Type头部信息设置为application/x-www-form-urlencoded，也就是表单提交的内容类型，其次是以适当的格式创建一个字符串。</p>
-<h2 id="XMLHttpRequest-2级"><a href="#XMLHttpRequest-2级" class="headerlink" title="XMLHttpRequest 2级"></a>XMLHttpRequest 2级</h2><p>鉴于XHR已经得到广泛的接受，成为了事实标准。W3C也着手制定相应的标准以规范其行为。XHR 1级只是把已有的XHR对象的实现斜街描述出来。而XHR 2级则进一步发展了XHR。</p>
-<h3 id="FormData"><a href="#FormData" class="headerlink" title="FormData"></a>FormData</h3><p>现代Web应用中频繁使用的一项功能就是表单数据的序列化，XHR 2级为此定义了FormData类型。FormData为序列化表单以及创建与表单格式相同的数据提供了便利。</p>
-<h3 id="超时设定"><a href="#超时设定" class="headerlink" title="超时设定"></a>超时设定</h3><p>IE8为XHR对象添加了一个timeout属性，表示请求在等待响应多少毫秒之后就终止。在给timeout设置一个数值后，如果在规定的时间内浏览器还没有接收到响应，那么就会触发timeout事件，进而会调用ontimeout事件处理程序。这项功能后来也被收入了XHR 2级规范中。</p>
-<h3 id="overrideMimeType方法"><a href="#overrideMimeType方法" class="headerlink" title="overrideMimeType方法"></a>overrideMimeType方法</h3><p>Firefox最早引入overrideMimeType方法，用于充血XHR响应的MIME类型。这个方法后来也被纳入XHR 2级。因为返回响应的MIME类型决定了XHR对象如何处理它，所以提供一种方法能够重写服务器返回的MIME类型是很有用的。</p>
-<h2 id="进度事件"><a href="#进度事件" class="headerlink" title="进度事件"></a>进度事件</h2><p>Progress Events规范是W3C的一个工作草案，定义了与客户端服务器通信有关的事件。这些事件最早其实只针对XHR操作，但目前也被其他API借鉴。有以下6个进度事件。</p>
-<ul>
-<li>loadstart：在接收到响应数据的第一个字节时触发。</li>
-<li>progress：在接收响应期间持续不断地触发。</li>
-<li>error：在请求发生错误触发。</li>
-<li>abort：在因为调用abort方法而终止连接时触发。</li>
-<li>load：在接收到完整的响应数据时触发。</li>
-<li>loadend：在通信完成或者触发error、abort或load事件后触发。</li>
-</ul>
-<p>每个请求从触发loadstart事件开始，接下来一个或多个progress事件，然后触发error、abort或load事件中的一个，最后以触发loadend事件结束。</p>
-<h2 id="跨源资源共享"><a href="#跨源资源共享" class="headerlink" title="跨源资源共享"></a>跨源资源共享</h2><p>通过XHR实现Ajax通信的一个主要限制，来源于跨域安全策略。默认情况下，XHR对象只能访问与包含它的页面位于同一个域中的资源。这种安全策略可以预防某些恶意行为。但是，实现合理的跨域请求对开发某些浏览器应用程序也是至关重要。</p>
-<p>CORS(Cross-Origin Resource Sharing，跨源资源共享)是W3C的一个工作草案，定义了在必须访问跨源资源时，浏览器与服务器应该如何沟通。CORS背后的基本思想，就是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定或响应是应该成功还是应该失败。</p>
-<p>在发送一个请求时，需要给它附加一个额外的Origin头部，其中包含请求页面的源信息，以便服务器根据增额头部信息来决定是否给予响应。如果服务器认为这个请求可以接受，就在Access-Control-Allow-Origin头部中回发相同的源信息。</p>
-<p>如果没有这个头部，或者有这个头部但源信息不匹配，浏览器就会驳回请求。</p>
-<h2 id="其他跨域技术"><a href="#其他跨域技术" class="headerlink" title="其他跨域技术"></a>其他跨域技术</h2><p>在CORS出现之前，要实现跨域Ajax通信破费一些周折。开发人员想出了办法，利用DOM中能够执行跨域请求的功能，在不依赖XHR对象的情况下也能发送某种请求。</p>
-<h3 id="图像Ping"><a href="#图像Ping" class="headerlink" title="图像Ping"></a>图像Ping</h3><p>第一种跨域请求是使用img标签，因为一个网页可以从任意的网页中加载图像，不用担心是否跨域。因为可以动态地创建图像，使用它们的onload和onerror事件处理程序来确定是否接收到响应。</p>
-<p>动态创建图像经常用于图像Ping。图像Ping是与服务器进行简单、单向的跨域通信方式。请求的数据是通过查询字符串形式发送的，而响应可以是任意内容，但通常是像素图或204响应。通过图像Ping，浏览器得不到任何具体的数据。</p>
-<p>图像Ping最常用于跟踪用户点击页面或动态广告曝光次数，图像Ping有两个缺点：</p>
-<ol>
-<li>是能发送GET请求</li>
-<li>无法访问服务器的响应文本。</li>
-</ol>
-<h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><p>JSONP 是 JSON with padding(填充式或参数式JSON)的简写，是应用JSON的一种新方法。JSONP看起来和JSON差不多，只不过被包含在函数调用中的JSON。</p>
-<p>JSONP由两个部分组成：回调函数和数据。回调函数是当响应到来时应当在页面中调用的函数。回调函数的名字一般是在请求中指定的。而数据就是传入回调函数中的JSON数据。</p>
-<p>JSONP是通过动态script元素的src属性来使用的，与img属性类似，都具有跨域加载资源的能力。因为JSONP是有效的javaScript代码，所以在请求完成后，即在JSONP响应加载到页面中以后，就会立即执行。</p>
-<p>首先，JSONP是从其他域中加载代码执行。如果其他域不安全，很可能会在响应中夹带一些恶意代码。其次，要确定JSONP请求是否失败并不容易，为此，必须设定计时器，检测指定时间内是否接收到响应。</p>
-<h3 id="Comet"><a href="#Comet" class="headerlink" title="Comet"></a>Comet</h3><p>Comet是一种更高级的Ajax技术。Ajax是一种从页面向服务器请求数据的技术，而Comet则是一种服务器向页面推送数据的技术。Comet能够让信息近乎实时地被推送到页面上，非常适合处理体育比赛和股票报价。</p>
-<p>有两种实现Comet的方式：长轮询和流。长轮询是传统轮询的一个翻版，传统轮询是浏览器定时向服务器发送请求，看看有没有更新数据。而长轮询把传统轮训颠倒了一下。页面发起一个服务器的请求，然后服务器一直保持连接打开，直到有数据可发送。发送完数据之后，浏览器关闭连接，随即又发起一个到服务器的新请求。</p>
-<p>无论短轮询还是长轮询，浏览器都要在接收数据之前，先发起对服务器的连接。两者最大的区别在于服务器如何发送数据。短轮询是服务器立即发送响应，无论数据是否有效，而长轮询是等待发送响应。</p>
-<p>第二种流行的Comet实现是HTTP流。流不同于上述两种轮询，因为它在页面的整个声明周期内只使用一个HTTP连接。具体来说，就是浏览器向服务器发送一个请求，而服务器保持连接打开，然后周期性地向浏览器发送数据。</p>
-<h3 id="服务器发送事件"><a href="#服务器发送事件" class="headerlink" title="服务器发送事件"></a>服务器发送事件</h3><p>SSE(Server-Sent Events，服务器发送事件)是围绕只读Comet交互推出的API或者模式。SSE API用于创建到服务器的单向连接，服务器通过这个连接可以发送任意数量的数据。服务器响应的MIME类型必须是text/event-stream，而且是浏览器中的JavaScript API能解析格式输出。SSE支持短轮询、长轮询和HTTP流，而且能在断开连接自动确定如何重新连接。有了这么简单实用的PAI，再实现Comet就容易多了。</p>
-<h3 id="Web-Sockets"><a href="#Web-Sockets" class="headerlink" title="Web Sockets"></a>Web Sockets</h3><p>Web Sockets的目标是在一个单独的持久连接上提供全双工、双向通信。在JavaScript中创建了Web Socket之后，会有一个HTTP请求发送到浏览器以发起连接。在取得服务器响应后，建立的连接会使用HTTP升级从HTTP协议交换为Web Socket协议。使用标准的HTTP服务器无法实现Web Sockets，只有支持这种协议的专门服务器才能正常工作。</p>
-<p>由于Web Sockets使用了自定义的协议，所以URL模式也略有不同。未加密的连接是ws://；加密的是wss://；在使用Web Socket URL时，必须要带着这个模式，因为将来还有可能支持其他模式。</p>
-<h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><p>对于未被授权系统有权访问某个资源的情况，称之为CSRF(Cross-Site Request Forgery，跨站点请求伪造)。未被授权系统会会伪装自己，让处理请求的服务器认为它是合法的。为确保通过XHR访问的URL安全，通行的做饭就是验证发送请求者是否有权访问相应的资源。一般的做法是</p>
-<ul>
-<li>要求以SSL连接来访问可以通过XHR请求的资源</li>
-<li>要求每一次请求都要附带经过相应算法计算得到的验证码。</li>
-</ul>
-<p>以下措施对防范CSRF攻击不起作用。</p>
-<ul>
-<li>邀请发送POST而不是GET请求</li>
-<li>检查来源URL以确定是否可信</li>
-<li>基于cookie信息进行验证</li>
-</ul>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>Ajax是无需刷新页面就能够从服务器取得数据的一种方法。关于Ajax可以从以下几防霾呢来总结：</p>
-<ul>
-<li>负责Ajax运作的核心对象时XMLHttpRequest对象。</li>
-<li>XHR对象是IE5最早引入，用于通过JavaScript从服务器取得XML数据。</li>
-<li>XHR成为了Web的一个事实标准</li>
-<li>虽然实现存在差异，但XHR基本用法相对规范。可以放心使用</li>
-</ul>
-<p>同源策略是对XHR的一个主要约束，可以采用被认可的跨域解决方案访问跨域资源。这个方案叫做CORS(Cross-Origin Resource Sharing, 跨源资源共享)，大部分浏览器原生支持CORS。图像Ping和JSONP是另外两种跨域通信的技术，但不如CORS稳妥。</p>
-<p>Comet是对Ajax的进一步扩展，让服务器几乎能够实时地向客户端推送数据。实现Comet的手段主要有两个：长轮询和HTTP流。所有浏览器都支持长轮询，而只有部分浏览器原生支持HTTP流。SSE是一种实现Comet交互的浏览器API，既支持长轮询，也支持HTTP流。</p>
-<p>Web Sockets是一种与服务器进行全双工、双向通信的信道。与其他方案不同，Web Sockets不实用HTTP协议，而使用一种自定义的协议。这种协议专门为跨素传输小数据设计。虽然要求使用不同的Web服务器，但却具有速度上的优势。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/11/JS高程-第21章-Ajax和Comet/">展开全文 >></a>
         </p>
       
 

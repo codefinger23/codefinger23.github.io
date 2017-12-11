@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/19/JS高程-第四章-变量、作用域和内存/index.html">
 <meta property="og:site_name" content="CodeFinger">
 <meta property="og:description" content="本章深入讲解了变量的实现和作用域的原理，并对JavaScript中的内存形成初步认识。">
-<meta property="og:updated_time" content="2017-10-20T14:56:30.359Z">
+<meta property="og:updated_time" content="2017-12-11T16:40:46.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第四章 变量、作用域和内存">
 <meta name="twitter:description" content="本章深入讲解了变量的实现和作用域的原理，并对JavaScript中的内存形成初步认识。">
@@ -175,9 +175,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>本章深入讲解了变量的实现和作用域的原理，并对JavaScript中的内存形成初步认识。<br><a id="more"></a></p>
-<h2 id="基本类型和引用类型的值"><a href="#基本类型和引用类型的值" class="headerlink" title="基本类型和引用类型的值"></a>基本类型和引用类型的值</h2></blockquote>
-<p>基本类型指的是undefined, null, boolean, number, string 这5种基本的类型，他们的值是通过变量名直接访问内存空间，与传统语言的差别不大。基本类型是按值访问的，因为可以直接操作保存在内存中的数据。</p>
+<p>本章深入讲解了变量的实现和作用域的原理，并对JavaScript中的内存形成初步认识。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="基本类型和引用类型的值"><a href="#基本类型和引用类型的值" class="headerlink" title="基本类型和引用类型的值"></a>基本类型和引用类型的值</h2><p>基本类型指的是undefined, null, boolean, number, string 这5种基本的类型，他们的值是通过变量名直接访问内存空间，与传统语言的差别不大。基本类型是按值访问的，因为可以直接操作保存在内存中的数据。</p>
 <p>引用类型Object的值，是保存在内存空间的对象，可能由多种数据聚合，由于JavaScript不允许直接访问内存数据，所以必须通过引用进行操作，因为是在操作对象的引用，而不是实际对象的值，所以引用类型是按引用访问的。</p>
 <blockquote>
 <p>有些语言比如C++，字符串是以对象的形式表示的String，因此也是引用类型。但在ECMAScript中不是这样的。</p>

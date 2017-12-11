@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://codefinger.cn/wp-content/uploads/2017/11/Screen-Shot-2017-11-04-at-00.23.35.png">
 <meta property="og:image" content="https://codefinger.cn/wp-content/uploads/2017/11/Screen-Shot-2017-11-04-at-00.26.17.png">
 <meta property="og:image" content="https://codefinger.cn/wp-content/uploads/2017/11/Screen-Shot-2017-11-04-at-00.28.19.png">
-<meta property="og:updated_time" content="2017-11-16T14:10:14.235Z">
+<meta property="og:updated_time" content="2017-12-11T16:39:29.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程 第十三章 事件">
 <meta name="twitter:description" content="事件是JavaScript和HTML文档交互的核心，事件就是文档或浏览器窗口中发生一些特定交互的瞬间。可以通过监听器或处理程序来预定事件。这种方式在传统软件工程中称为观察者模式，以支持页面的行为与页面外观之间的松散耦合。">
@@ -179,8 +179,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>事件是JavaScript和HTML文档交互的核心，事件就是文档或浏览器窗口中发生一些特定交互的瞬间。可以通过监听器或处理程序来预定事件。这种方式在传统软件工程中称为观察者模式，以支持页面的行为与页面外观之间的松散耦合。<br><a id="more"></a></p>
+<p>事件是JavaScript和HTML文档交互的核心，事件就是文档或浏览器窗口中发生一些特定交互的瞬间。可以通过监听器或处理程序来预定事件。这种方式在传统软件工程中称为观察者模式，以支持页面的行为与页面外观之间的松散耦合。</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p>事件流描述的是从页面接受事件的顺序。有意思的地方是IE和Netscape开发团队提出了差不多完全相反的事件流概念。IE的事件流是事件冒泡流，而Netscape的事件流是事件捕获流。</p>
 <h3 id="事件冒泡流"><a href="#事件冒泡流" class="headerlink" title="事件冒泡流"></a>事件冒泡流</h3><p>IE的事件流叫做事件冒泡流，即事件开始由具体的元素接受，然后逐级向上传播到较为不具体的节点。以HTML代码为例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;Event Bubbling Example&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;myDiv&quot;&gt;Click Me&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>

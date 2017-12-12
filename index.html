@@ -151,6 +151,150 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CSS-The-Definitive-Guide-Chapter-5-Fonts" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/12/CSS-The-Definitive-Guide-Chapter-5-Fonts/">CSS: The Definitive Guide-Chapter 5-Fonts</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/12/CSS-The-Definitive-Guide-Chapter-5-Fonts/" class="archive-article-date">
+  	<time datetime="2017-12-12T14:45:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>CSS does not provide ultimate control over fonts any more than a word processor does.</p>
+</blockquote>
+<h2 id="Font-Families"><a href="#Font-Families" class="headerlink" title="Font Families"></a>Font Families</h2><ul>
+<li>Values: [[<family-name> | <generic-family>],]* [<family-name> | <generic-family>] | inherit</generic-family></family-name></generic-family></family-name></li>
+<li>Initial value: User agent-specific</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Font-Weights"><a href="#Font-Weights" class="headerlink" title="Font Weights"></a>Font Weights</h2><ul>
+<li>Values: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit</li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: One of the numeric values(100, et.), or one of the numeric values plus one of the relative values (bloder or lighter)</li>
+</ul>
+<h2 id="Font-Size"><a href="#Font-Size" class="headerlink" title="Font Size"></a>Font Size</h2><ul>
+<li>Values: xx-small | x-small | small | medium | large | x-large | xx-large | smaller | larger | <length> | <percentage> | inherit</percentage></length></li>
+<li>Initial value: medium</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Percentages: Calculated with respect to the parent elements’s font size</li>
+<li>Computed value: An absolute length</li>
+</ul>
+<h2 id="Styles-and-Variants"><a href="#Styles-and-Variants" class="headerlink" title="Styles and Variants"></a>Styles and Variants</h2><h3 id="Fonts-with-Style"><a href="#Fonts-with-Style" class="headerlink" title="Fonts with Style"></a>Fonts with Style</h3><ul>
+<li>Values: italic | oblique | normal | inherit</li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h3 id="Font-Variations"><a href="#Font-Variations" class="headerlink" title="Font Variations"></a>Font Variations</h3><ul>
+<li>Values: small-caps | normal | inherit</li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Stretching-and-Adjusting-Fonts"><a href="#Stretching-and-Adjusting-Fonts" class="headerlink" title="Stretching and Adjusting Fonts"></a>Stretching and Adjusting Fonts</h2><p>font-stretch</p>
+<ul>
+<li>Values: normal | wider | narrower | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | semi-expanded | expanded | extra-expand | ultra-expanded | inherit</li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+</ul>
+<p>font-size-adjust</p>
+<ul>
+<li>Values: <number> | none | inherit</number></li>
+<li>Initial value: none</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+</ul>
+<h2 id="Font-Matching"><a href="#Font-Matching" class="headerlink" title="Font Matching"></a>Font Matching</h2><ol>
+<li>The user agent creates, or otherwise access, a database of font propertis.</li>
+<li>The user agent takes apart an elment to which font properties have been applied and constructs a list of font properties necessary for the display of that element.</li>
+<li>If there was no font match in Step 2, the user agent looks for alternate fonts within the same font family.</li>
+<li>Assuming a generic match has been found, but it doesn’t contain everything needed to display a given element——the font is missing the copyright symbol, for instance——then the user agent goes back to Step 3, which entails a search for another alternate font and another trip through Step 2.</li>
+<li>Finally, if no match has been made and all alternate fonts have been tried, then the user agent selects the default font for the given generic font family and does the best it can can to display the element correctly.</li>
+</ol>
+<h2 id="Font-Face-Rules"><a href="#Font-Face-Rules" class="headerlink" title="Font-Face Rules"></a>Font-Face Rules</h2><ul>
+<li>Font-name matching</li>
+<li>Intelligent font matching</li>
+<li>Font synthesis</li>
+<li>Font download</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Although authors cannot count on a specific font being used in a document, they can very easily specify generic font families to be used.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/12/CSS-The-Definitive-Guide-Chapter-5-Fonts/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CSS-The-Definitive-Guide-Chapter-4-Values-and-Units" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -889,88 +1033,6 @@
 
 
   
-    <article id="post-Java编程思想-第17章-容器深入研究" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/02/Java编程思想-第17章-容器深入研究/">Java编程思想 第17章 容器深入研究</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/02/Java编程思想-第17章-容器深入研究/" class="archive-article-date">
-  	<time datetime="2017-12-02T10:55:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>第11章介绍了Java容器类库的概念和基本功能，这些对于使用容器来说已经足够了。本章将更深入地探索这个重要的类库。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/12/02/Java编程思想-第17章-容器深入研究/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/02/Java编程思想-第17章-容器深入研究/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1084,11 +1146,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
             
             <div class="clearfix"></div>

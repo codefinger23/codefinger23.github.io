@@ -151,6 +151,301 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CSS-The-Definitive-Guide-Chapter-7-Basic-Visual-Formatting" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/14/CSS-The-Definitive-Guide-Chapter-7-Basic-Visual-Formatting/">CSS: The Definitive Guide-Chapter 7-Basic Visual Formatting</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/14/CSS-The-Definitive-Guide-Chapter-7-Basic-Visual-Formatting/" class="archive-article-date">
+  	<time datetime="2017-12-14T15:04:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>with a model as open add powerful as that contained within CSS, no book could hope to cover every possible way of combining properties and effects.</p>
+</blockquote>
+<h2 id="Basic-Boxes"><a href="#Basic-Boxes" class="headerlink" title="Basic Boxes"></a>Basic Boxes</h2><p>CSS assumes that every element generates one or more rectangular boxes, called elment boxes. Each element box has a content area at its core.</p>
+<ul>
+<li>Normal flow: The left-to-right, top-to-bottom rendering of text in Western languages and the familiar text layout of traditional HTML documents.</li>
+<li>Nonreplaced element: An elemnt whose content is contained within the document.</li>
+<li>Replaced element: An element that serves as a placeholder for something else.</li>
+<li>Block-level element: An element such as a paragraph, heading, or a div.</li>
+<li>Inline element: An element such as strong or span.</li>
+<li>Root element: The element at the top of document tree.</li>
+</ul>
+<h2 id="Block-Level-Elements"><a href="#Block-Level-Elements" class="headerlink" title="Block-Level Elements"></a>Block-Level Elements</h2><p>Block-level elements can behave in both predictable and surprising ways.</p>
+<h3 id="Horizontal-Formatting"><a href="#Horizontal-Formatting" class="headerlink" title="Horizontal Formatting"></a>Horizontal Formatting</h3><p>Horizontal formatting is often more complex than you’think.</p>
+<ul>
+<li>Horizontal properties: margin-left, border-left, padding-left, width, padding-right, border-right, margin-right.</li>
+<li>Using auto: set properties to a value of auto, and give the remaining two properties specific values, then the property that is set to auto determines the length required to make the element box’s width equal to the parent element’s width.</li>
+<li>More than one auto: If both margins are set to auto, they are set to equal lengths, thus centering the element within its parent.</li>
+<li>Negative margins: With a negative left margin, not only does the paragraph spill beyongd the borders of the div, but it also spills beyond the edge of the brower window itself.</li>
+<li>Percentage: The bottom line is that it’s impossible to create a fully flexible element layout based solely on percentages unless you’re willing to avoid using borders</li>
+<li>Replaced elements: When a replaced element’s width is changed from its intrinsic width, the value of height is scaled to match, unless height has been set to an explicit value of its own.</li>
+</ul>
+<h3 id="Vertical-Formatting"><a href="#Vertical-Formatting" class="headerlink" title="Vertical Formatting"></a>Vertical Formatting</h3><p>Like horizontal formatting, vertical formatting of block-level elements has its own set of interesting behaviors.</p>
+<ul>
+<li>Vertical properties: margin-top, border-top, padding-top, height, padding-bottom, border-bottom, margin-bottom.</li>
+<li>Percentage heights:</li>
+<li>Auto heights</li>
+<li>Collapsing vertical margins</li>
+<li>Negative margins</li>
+</ul>
+<h3 id="List-Items"><a href="#List-Items" class="headerlink" title="List Items"></a>List Items</h3><p>List items have a few special rules of their own. They are typically preceded by a marker, such as a small dot or a number.</p>
+<h2 id="Inline-Elements"><a href="#Inline-Elements" class="headerlink" title="Inline Elements"></a>Inline Elements</h2><p>Nonreplaced and replaced elements are treated somewhat differently in the inline context, and we’ll look at each in turn as we explore the construction of inline elements</p>
+<ul>
+<li>Anonymous text: This is any string of characters that is not contained within an inline element.</li>
+<li>Em box: This is defined in the given font, otherwise known as the character box.</li>
+<li>Content area: In nonreplaced elements, the content area can be one of two things, and the CSS2.1 specification allows user agents to choose which one.</li>
+<li>Leading: The leading is the difference between the values of font-size and line -height</li>
+<li>Inline box: This is the shortest box that bounds the highest and lowest points of the inline boxes that are found in the line.</li>
+</ul>
+<h2 id="Altering-Element-Display"><a href="#Altering-Element-Display" class="headerlink" title="Altering Element Display"></a>Altering Element Display</h2><p>display</p>
+<ul>
+<li>Values: none | inline | block | inline-block | list-item | run-in | table | inline-table | table-row-group | table-header-group | table-footer-group | table-row | table-column-group | table-column | table-cell | tabel-caption | inherit</li>
+<li>Initial value: inline</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: Varies for floated, positioned, and root elements (see CSS2.1, section 9.7); otherwise, as specified.</li>
+<li>Note: The values compact and marker appeared in CSS2 but were dropped from CSS2.1 due to lack of widespread support.</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Although some aspects of the CSS formatting model may seem counterintuitive at first, they begin to make sense as you work with them more.In many cases, rules that initially seem nonsensical or even idiotic turn out to prevent bizarre or otherwise undesirable document displays.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/14/CSS-The-Definitive-Guide-Chapter-7-Basic-Visual-Formatting/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CSS-The-Definitive-Guide-Chapter-6-Text-Properties" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/13/CSS-The-Definitive-Guide-Chapter-6-Text-Properties/">CSS: The Definitive Guide-Chapter 6-Text Properties</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/13/CSS-The-Definitive-Guide-Chapter-6-Text-Properties/" class="archive-article-date">
+  	<time datetime="2017-12-13T15:23:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Because text is so important, there are many CSS properties that affect it in one way or another. </p>
+</blockquote>
+<h2 id="Indentation-and-Horizontal-Alignment"><a href="#Indentation-and-Horizontal-Alignment" class="headerlink" title="Indentation and Horizontal Alignment"></a>Indentation and Horizontal Alignment</h2><h3 id="Indenting-Text"><a href="#Indenting-Text" class="headerlink" title="Indenting Text"></a>Indenting Text</h3><p>Indenting the first ilne of a paragraph on a web page is one of the most sought-after text-formatting effects.</p>
+<p>text-indent</p>
+<ul>
+<li>Value: <length> | <percentage> | inherit</percentage></length></li>
+<li>Initial value: 0</li>
+<li>Applies to: Block-level elements</li>
+<li>Inherited: Yes</li>
+<li>Percentages: Refer to the width of the containing block</li>
+<li>Computed value: For percentage values, as specified; for length values, the absolute length</li>
+</ul>
+<h3 id="Horizontal-Alignment"><a href="#Horizontal-Alignment" class="headerlink" title="Horizontal Alignment"></a>Horizontal Alignment</h3><p>text-align</p>
+<ul>
+<li>CSS2.1 values: left | center | right | justify | inherit</li>
+<li>CSS2 values: left | center | right | justify | <string> | inherit</string></li>
+<li>Initial value: User agent-specific; may also depend on writing direction</li>
+<li>Applies to: Block-level elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+<li>Node: CSS2 included a <string> value that was dropped from CSS2.1 due to a lack of implementation</string></li>
+</ul>
+<h2 id="Vertical-Alignment"><a href="#Vertical-Alignment" class="headerlink" title="Vertical Alignment"></a>Vertical Alignment</h2><p>The line-height property refers to the distance between the baselines of lines of text rather than the size of the font, and it determines the amount by which the height of each element’s box is increased or decreased.</p>
+<p>line-height</p>
+<ul>
+<li>Values: <length> | <percentage> | <number> | normal | inherit</number></percentage></length></li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements (but see text regarding replaced and block-level elements)</li>
+<li>Inherited: Yes</li>
+<li>Percentages: Relative to the font size of the element</li>
+<li>Computed value: For length and percentage values, the absolute value; other wise, as specified</li>
+</ul>
+<h2 id="Word-Spacing-and-Letter-Spacing"><a href="#Word-Spacing-and-Letter-Spacing" class="headerlink" title="Word Spacing and Letter Spacing"></a>Word Spacing and Letter Spacing</h2><h3 id="Word-Spacing"><a href="#Word-Spacing" class="headerlink" title="Word Spacing"></a>Word Spacing</h3><p>The word-spacing property accepts a positive or negative length.</p>
+<p>word-spacing</p>
+<ul>
+<li>Values: <length> | normal | inherit</length></li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: For normal, the absolute length 0; otherwise, the absolute length</li>
+</ul>
+<h3 id="Letter-Spacing"><a href="#Letter-Spacing" class="headerlink" title="Letter Spacing"></a>Letter Spacing</h3><p>Many of the issues you encounter with word-spacing also occur with letter-spacing.</p>
+<p>letter-spacing</p>
+<ul>
+<li>Values: <length> | normal | inherit</length></li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: For length values, the absolute length; otherwise, normal</li>
+</ul>
+<h2 id="Text-Transformation"><a href="#Text-Transformation" class="headerlink" title="Text Transformation"></a>Text Transformation</h2><p>text-transform</p>
+<ul>
+<li>Values: uppercase | lowercase | capitalize | none | inherit</li>
+<li>Initial value: none</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Text-Decoration"><a href="#Text-Decoration" class="headerlink" title="Text Decoration"></a>Text Decoration</h2><p>text-decoration</p>
+<ul>
+<li>Values: none | [underline || overline || line-through || blink] | inherit</li>
+<li>Initial value: none</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Text-Shadows"><a href="#Text-Shadows" class="headerlink" title="Text Shadows"></a>Text Shadows</h2><p>CSS2 include a property for adding drop shadows to text, but this property did not make it into CSS2.1 because no browser had implemented full support for it by the time CSS2.1 was completed.</p>
+<p>text-shadow</p>
+<ul>
+<li>Values: none | [<color> || <length> <length> <length>? ,]* [<color> || <length> <length> <length> ?] | inherit</length></length></length></color></length></length></length></color></li>
+<li>Initial value: none</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+</ul>
+<p>white-space</p>
+<ul>
+<li>Values: normal | nowrap | pre | pre-wrap | pre-line | inherit</li>
+<li>Initial value: normal</li>
+<li>Applies to: All elements (CSS2.1); block-level elements (CSS1 and CSS2)</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>direction</p>
+<ul>
+<li>Values: ltr | rtl | inherit</li>
+<li>Initial value: ltr</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>even without altering the font in use, there are many ways to change the appearance of text. There are classic effects such as underlinging, of course, but CSS also enables you to draw lines over text or through it, change the amount of space between words and letters, indent the first line of a paragraph, align text to the left or right, and much more.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/13/CSS-The-Definitive-Guide-Chapter-6-Text-Properties/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CSS-The-Definitive-Guide-Chapter-5-Fonts" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -807,170 +1102,6 @@
 
 
   
-    <article id="post-Java编程思想-第19章-枚举类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/04/Java编程思想-第19章-枚举类型/">Java编程思想 第19章 枚举类型</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/04/Java编程思想-第19章-枚举类型/" class="archive-article-date">
-  	<time datetime="2017-12-04T14:05:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>关键字enum可以将一组具名的值的有限集合创建为一种新的类型，而这些具名的值可以作为常规的程序组件使用。这是一种非常有用的功能。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/12/04/Java编程思想-第19章-枚举类型/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/04/Java编程思想-第19章-枚举类型/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java编程思想-第18章-Java-I-O系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/03/Java编程思想-第18章-Java-I-O系统/">Java编程思想 第18章 Java I/O系统</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/03/Java编程思想-第18章-Java-I-O系统/" class="archive-article-date">
-  	<time datetime="2017-12-03T09:08:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>对程序语言的设计者来说，创建一个好的输入/输出(I/O)系统是一项艰难的任务。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/12/03/Java编程思想-第18章-Java-I-O系统/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/03/Java编程思想-第18章-Java-I-O系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1084,11 +1215,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color3">翻译</a>
               </li>
             
             <div class="clearfix"></div>

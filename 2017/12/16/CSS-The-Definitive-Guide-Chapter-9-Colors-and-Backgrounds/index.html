@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java编程思想 第20章 注解 | CodeFinger</title>
+  <title>CSS: The Definitive Guide-Chapter 9-Colors and Backgrounds | CodeFinger</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。">
-<meta name="keywords" content="读书笔记,Java编程思想">
+  <meta name="description" content="CSS takes color and backgrounds even further, letting you apply many different colors and backgrounds to a single page, and all without a single FONT or TABLE tag.">
+<meta name="keywords" content="读书笔记,CSS: The Definitive Guide">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java编程思想 第20章 注解">
-<meta property="og:url" content="http://yoursite.com/2017/12/05/Java编程思想-第20章-注解/index.html">
+<meta property="og:title" content="CSS: The Definitive Guide-Chapter 9-Colors and Backgrounds">
+<meta property="og:url" content="http://yoursite.com/2017/12/16/CSS-The-Definitive-Guide-Chapter-9-Colors-and-Backgrounds/index.html">
 <meta property="og:site_name" content="CodeFinger">
-<meta property="og:description" content="注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。">
-<meta property="og:updated_time" content="2017-12-07T14:16:52.208Z">
+<meta property="og:description" content="CSS takes color and backgrounds even further, letting you apply many different colors and backgrounds to a single page, and all without a single FONT or TABLE tag.">
+<meta property="og:updated_time" content="2017-12-16T08:11:35.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java编程思想 第20章 注解">
-<meta name="twitter:description" content="注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。">
+<meta name="twitter:title" content="CSS: The Definitive Guide-Chapter 9-Colors and Backgrounds">
+<meta name="twitter:description" content="CSS takes color and backgrounds even further, letting you apply many different colors and backgrounds to a single page, and all without a single FONT or TABLE tag.">
   
     <link rel="alternative" href="/atom.xml" title="CodeFinger" type="application/atom+xml">
   
@@ -154,20 +154,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java编程思想-第20章-注解" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS-The-Definitive-Guide-Chapter-9-Colors-and-Backgrounds" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java编程思想 第20章 注解
+      CSS: The Definitive Guide-Chapter 9-Colors and Backgrounds
     </h1>
   
 
         
-        <a href="/2017/12/05/Java编程思想-第20章-注解/" class="archive-article-date">
-  	<time datetime="2017-12-05T14:21:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-05</time>
+        <a href="/2017/12/16/CSS-The-Definitive-Guide-Chapter-9-Colors-and-Backgrounds/" class="archive-article-date">
+  	<time datetime="2017-12-16T07:06:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-16</time>
 </a>
         
       </header>
@@ -175,15 +175,71 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>注解(也被称为元数据)为我们在代码中添加信息提供了一种形式化的方法，使我们可以在稍后某个时刻非常方便地使用这些数据。</p>
+<p>CSS takes color and backgrounds even further, letting you apply many different colors and backgrounds to a single page, and all without a single FONT or TABLE tag.</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>基本语法部分有定义注解和使用注解，除了@符号以外，注解的定义和接口很像，定义注解需要一些元注解，如@Target和@Retention。</p>
-<h2 id="编写注解处理器"><a href="#编写注解处理器" class="headerlink" title="编写注解处理器"></a>编写注解处理器</h2><p>使用注解的过程中，很重要的一个部分就是创建与使用注解处理器。Java SE5扩张了反射机制的API，可以帮助程序员构造这类工具。还有一个外部工具apt帮助程序员解析带有注解的Java源代码。</p>
-<h2 id="使用apt处理注解"><a href="#使用apt处理注解" class="headerlink" title="使用apt处理注解"></a>使用apt处理注解</h2><p>注解处理工具apt，这是Sun为了帮助注解的处理过程而提供的工具。与javac一样，apt被设计为操作Java源文件，而不是编译后的类。默认情况下，apt会在处理完源文件后编译它们。</p>
-<h2 id="将观察者模式用于apt"><a href="#将观察者模式用于apt" class="headerlink" title="将观察者模式用于apt"></a>将观察者模式用于apt</h2><p>为了防止处理注解的复杂度的攀升，mirror API提供了对观察者模式的支持。观察者会遍历某个数据结构或一个对象的集合，对其中每一个对象执行一个操作。该数据结构无需有序，而对每个对象执行的操作，都是特定于此对象的类型。这就将操作与对象解耦，也就是说，可以添加新的操作而无需向类的定义中添加方法。</p>
-<h2 id="基于注解的单元测试"><a href="#基于注解的单元测试" class="headerlink" title="基于注解的单元测试"></a>基于注解的单元测试</h2><p>单元测试是对类中的每个方法提供一个或多个测试的一种实践，其目的是为了有规律地测试一个雷的各个部分是否具备正确的行为。通过注解，可以很方便地为方法提供测试用例。在Java中，最著名的单元测试工具就是采用这种方式来实现的。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>注解是Java引入的一项非常受欢迎的补充。它提供了一种结构化的，并且具有类型检查能力的新途径，从而使得程序员能够为代码加入元数据，而不会导致代码杂乱且难以阅读。使用注解能够帮助避免编写累赘的部署描述文件，以及其他生成的文件。</p>
+<h2 id="Colors"><a href="#Colors" class="headerlink" title="Colors"></a>Colors</h2><h3 id="Forground-Colors"><a href="#Forground-Colors" class="headerlink" title="Forground Colors"></a>Forground Colors</h3><p>The easiest way to set the foreground color of an element is with the property color.</p>
+<p>color</p>
+<ul>
+<li>Value: <color> | inherit</color></li>
+<li>Initial value: User agent-specific</li>
+<li>Applies to: All elements</li>
+<li>Computed value: As specified</li>
+</ul>
+<h3 id="Replacingn-Attributes"><a href="#Replacingn-Attributes" class="headerlink" title="Replacingn Attributes"></a>Replacingn Attributes</h3><p>There are many users for color, the most basic of which is to replace the HTML 3.2 BODY attributes TEXT, LINK, ALINK, and VLINK. With th eanchor pseduo-classes, color can replace these BODY attributes outright.</p>
+<h3 id="Affecting-Borders"><a href="#Affecting-Borders" class="headerlink" title="Affecting Borders"></a>Affecting Borders</h3><p>The value of color can also affect the borders around an element.</p>
+<h2 id="Backgrounds"><a href="#Backgrounds" class="headerlink" title="Backgrounds"></a>Backgrounds</h2><p>The background area of an element consists of all of the space behind the foreground to the outer edge of the borders; thus, the content box and the padding are all part of an elements’s background, and the borders are drawn on top of the background.</p>
+<p>background-color</p>
+<ul>
+<li>Values: <color> | transparent | inherit</color></li>
+<li>Initial value: transparent</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>background-image</p>
+<ul>
+<li>Values: <uri> | none | inherit</uri></li>
+<li>Initial value: none</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: Absolute URI</li>
+</ul>
+<p>background-repeat</p>
+<ul>
+<li>Values: repeat | repeat-x | repeat-y | no-repeat | inherit</li>
+<li>Initial value: repeat</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>background-position</p>
+<ul>
+<li>Values: [[<percentage> | <length> | left | center | right] [<percentage> | <length> | top | center | bottom]?] || [[left | center | right] || [top | center | bottom]] | inherit</length></percentage></length></percentage></li>
+<li>Initial value: 0% 0%</li>
+<li>Applies to: Block-level and replaced elements</li>
+<li>Inherited: No</li>
+<li>Percentages: Refer to the corresponding point on both the element and the origin image (see explanation in “Percentage values” later in this chapter)</li>
+<li>Computed value: The absolute length offsets, if <length> is specified; otherwise, percentage values</length></li>
+</ul>
+<p>background-attachment</p>
+<ul>
+<li>Values: scroll | fixed | inherit</li>
+<li>Initial value: scroll</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>background</p>
+<ul>
+<li>Values: [ <background-color> || <background-image> || <background-repeat> || <background-attachment> || <background-postiton>] | inherit</background-postiton></background-attachment></background-repeat></background-image></background-color></li>
+<li>Initial value: Refer to individual properties</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Percentages: Values are allowed for <backgroudn-position></backgroudn-position></li>
+<li>Computed value: See individual properties</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Setting colors and backgrounds on elements gives authors a great deal of power. The advatage of CSS over traditional methods is that colors and backgrounds can be applied to any element in a document——not just table cells, for example, or anything enclosed in a FONT tag.</p>
 
       
 
@@ -232,7 +288,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
         		</li>
       		
 		</ul>
@@ -288,7 +344,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/05/Java编程思想-第20章-注解/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/16/CSS-The-Definitive-Guide-Chapter-9-Colors-and-Backgrounds/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -302,18 +358,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/06/Java编程思想-第21章-并发/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Java编程思想 第21章 并发
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/04/Java编程思想-第19章-枚举类型/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java编程思想 第19章 枚举类型</div>
+    <a href="/2017/12/15/CSS-The-Definitive-Guide-Chapter-8-Padding-Borders-and-Margins/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS: The Definitive Guide-Chapter 8-Padding, Borders, and Margins</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -343,7 +390,7 @@
   
 
   
-  <div id="SOHUCS" sid="Java编程思想-第20章-注解" ></div> 
+  <div id="SOHUCS" sid="CSS-The-Definitive-Guide-Chapter-9-Colors-and-Backgrounds" ></div> 
 <script type="text/javascript"> 
 window.YiliaChangyanWrap = function() {
     var appid = "cytdzaPlC"; 

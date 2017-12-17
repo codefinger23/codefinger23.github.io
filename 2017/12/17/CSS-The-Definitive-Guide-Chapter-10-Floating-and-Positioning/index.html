@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | CodeFinger</title>
+  <title>CSS: The Definitive Guide-Chapter 10-Floating and Positioning | CodeFinger</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeFinger">
-<meta property="og:url" content="http://yoursite.com/archives/page/6/index.html">
+  <meta name="description" content="Floating and positoning accomplishing basic layout tasks. These are the tools by which you can set up columnar layout, overlap one piece of layout with another, and generally accompulish everything t">
+<meta name="keywords" content="读书笔记,CSS: The Definitive Guide">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS: The Definitive Guide-Chapter 10-Floating and Positioning">
+<meta property="og:url" content="http://yoursite.com/2017/12/17/CSS-The-Definitive-Guide-Chapter-10-Floating-and-Positioning/index.html">
 <meta property="og:site_name" content="CodeFinger">
+<meta property="og:description" content="Floating and positoning accomplishing basic layout tasks. These are the tools by which you can set up columnar layout, overlap one piece of layout with another, and generally accompulish everything t">
+<meta property="og:updated_time" content="2017-12-17T09:11:51.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeFinger">
+<meta name="twitter:title" content="CSS: The Definitive Guide-Chapter 10-Floating and Positioning">
+<meta name="twitter:description" content="Floating and positoning accomplishing basic layout tasks. These are the tools by which you can set up columnar layout, overlap one piece of layout with another, and generally accompulish everything t">
   
     <link rel="alternative" href="/atom.xml" title="CodeFinger" type="application/atom+xml">
   
@@ -149,36 +154,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS-The-Definitive-Guide-Chapter-10-Floating-and-Positioning" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS: The Definitive Guide-Chapter 10-Floating and Positioning
+    </h1>
+  
+
+        
+        <a href="/2017/12/17/CSS-The-Definitive-Guide-Chapter-10-Floating-and-Positioning/" class="archive-article-date">
+  	<time datetime="2017-12-17T07:26:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-17</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Floating and positoning accomplishing basic layout tasks. These are the tools by which you can set up columnar layout, overlap one piece of layout with another, and generally accompulish everything that so many tables have been used for over the years.</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Floating"><a href="#Floating" class="headerlink" title="Floating"></a>Floating</h2><p>The additions to you ALIGN options need a lot of explanation. First, the values “left” and “right”. Images with those alignments are an entirely new floation image type.</p>
+<p>float</p>
+<ul>
+<li>Value: left | right | none | inherit</li>
+<li>Initial value: none</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>The Details Floating</p>
+<ol>
+<li>The left (or right) outer edge of a floated element may not be the left (or right) of the inner edge of its containing block.</li>
+<li>The left (or right) outer edge of a floated element must be to right (or left) of the right (left) outer edge of a left-floating (or right-floating) element that occurs earlier in the document’s source, unless the top of the later element is below the bottom of the former.</li>
+<li>The right outer edge of a left-floating element may not be to the right of the left outer edge of any right-floating element to its right. The left outer edge of a right-floating element may not be to the left of the right outer edge of any left-floating element to its left.</li>
+<li>A floating element’s top may not be higher than the inner top of its parent. If a floating element is between two collapsing margins, it is placed as though it had a block-level parent element between the two elements.</li>
+<li>A floating element’s top may not be higher than the top of any earlier floating or block-level element.</li>
+<li>A floating element’s top may not be higher than the top of any line box containing a box generated by an element that comes earlier in the document source.</li>
+<li>A left (or right) floating element that has another floating element to its left (right) may not have its right outer edge to the right (left) of its containing block’s right (left) edge.</li>
+<li>A floating element must be placed as high as possible.</li>
+<li>A left-floating element must be put as far to the right as possible. A higher position is preferred to one that is further to the right or left.</li>
+</ol>
+<p>clear</p>
+<ul>
+<li>Values: left | right | both | none | inherit</li>
+<li>Initial value: none</li>
+<li>Applies to: Block-level elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Positioning"><a href="#Positioning" class="headerlink" title="Positioning"></a>Positioning</h2><p>You can choose one of four different types of positioning, which affect how the element’s box is generated, by using the position property.</p>
+<p>position</p>
+<ul>
+<li>Values: static | relative | absolute | fixed | inherit</li>
+<li>Initial value: static</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>The containing block</p>
+<ul>
+<li>The containing block of the “root element” is established by the user agent.</li>
+<li>For a non-root element whose position value is relative or static, the containing block is formed by the content edge of the nearest block-level, table cell, or inline-block ancestor box.</li>
+<li>For non-root elements that have a position value of absolute, the containing block is set to the nearest ancestor that has a positon value other than static.</li>
+<li>If there are no ancestors, the element’s containing block is defined as the initial containing block.</li>
+</ul>
+<p>top, right, bottom, left</p>
+<ul>
+<li>Values: <length> | <percentage> | auto | inherit</percentage></length></li>
+<li>Initial value: auto</li>
+<li>Applies to: Positioned elements</li>
+<li>Inherited: No</li>
+<li>Percentages: Refer to the height of the containing block for top and bottom and the width of the containing block for right and left.</li>
+<li>Computed value: For relatively positioned elements, see the following Note; for static elements, auto; for length values, the corresponding absolute length; for percentage values, the specified value; otherwise, auto.</li>
+<li>Note: The computed values depend on a series of factors; see individual entries in Appendix A for examples.</li>
+</ul>
+<p>mmin-width, min-height</p>
+<ul>
+<li>Values: <length> | <percentage> | inherit</percentage></length></li>
+<li>Initial value: 0</li>
+<li>Applies to: All elements except nonreplaced inline elements and table elements</li>
+<li>Inherited: No</li>
+<li>Percentages: Refer to the width of the containing block</li>
+<li>Computed value: For percentages, as specified; for length values, the absolute length; otherwise, none.</li>
+</ul>
+<p>max-width, max-height</p>
+<ul>
+<li>Values: <length> | <percentage> | none | inherit</percentage></length></li>
+<li>Initial value: none</li>
+<li>Applies to: All elements except nonreplaced inline elements and table elements</li>
+<li>Inherited: No</li>
+<li>Percentages: Refer to the height of the containing block</li>
+<li>Computed value: For percentages, as specified; for length values, the absolute length; otherwise, none</li>
+</ul>
+<p>overflow</p>
+<ul>
+<li>Values: visible | hidden | scroll | auto | inherit</li>
+<li>Initial value: visible</li>
+<li>Applies to: Block-level and replaced elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>clip</p>
+<ul>
+<li>Values: rect(rop, right, bottom, left) | auto | inherit</li>
+<li>Initial value: auto</li>
+<li>Applies to: Absolutely positioned elments</li>
+<li>Inherited: No</li>
+<li>Computed value: For a rectangle, a set of four computed lengths representing the edges of the clipping rectangle; otherwise, as specified.</li>
+</ul>
+<p>visibility</p>
+<ul>
+<li>Values: visible | hidden | collapse | inherit</li>
+<li>Initial value: visible</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Commputed value: As specified</li>
+</ul>
+<p>z-index</p>
+<ul>
+<li>Values: <integer> | auto | inherit</integer></li>
+<li>Initial value: auto</li>
+<li>Applies to: Positioned elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Floating and positioning are very compelling features of CSS. They’re also likely to be an exercise in frustration if ou’re careless in how you use them.</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>打赏2元，你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/20/JS高程-第七章-函数表达式/" class="archive-article-date">
-  	<time datetime="2017-10-20T15:02:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/20/JS高程-第七章-函数表达式/">JS高程 第七章 函数表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -188,360 +332,122 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/17/CSS-The-Definitive-Guide-Chapter-10-Floating-and-Positioning/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/JS高程-第六章-面向对象程序设计/" class="archive-article-date">
-  	<time datetime="2017-10-19T15:29:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/16/CSS-The-Definitive-Guide-Chapter-9-Colors-and-Backgrounds/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS: The Definitive Guide-Chapter 9-Colors and Backgrounds</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/JS高程-第六章-面向对象程序设计/">JS高程 第六章 面向对象程序设计</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/JS高程-第五章-引用类型/" class="archive-article-date">
-  	<time datetime="2017-10-19T14:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/JS高程-第五章-引用类型/">JS高程 第五章 引用类型</a>
-    </h1>
+  <div id="SOHUCS" sid="CSS-The-Definitive-Guide-Chapter-10-Floating-and-Positioning" ></div> 
+<script type="text/javascript"> 
+window.YiliaChangyanWrap = function() {
+    var appid = "cytdzaPlC"; 
+    var conf = "prod_82a316b9427f4648629ce48d3be8bcf0"; 
+    var width = window.innerWidth || document.documentElement.clientWidth; 
+    if (width < 960) { 
+    window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+}
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/JS高程-第四章-变量、作用域和内存/" class="archive-article-date">
-  	<time datetime="2017-10-19T14:09:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/JS高程-第四章-变量、作用域和内存/">JS高程 第四章 变量、作用域和内存</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/JS高程-第三章-JS语法/" class="archive-article-date">
-  	<time datetime="2017-10-19T14:08:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/JS高程-第三章-JS语法/">JS高程 第三章 JS语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/JS高程-第二章-在HTML中使用JS/" class="archive-article-date">
-  	<time datetime="2017-10-19T14:08:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/JS高程-第二章-在HTML中使用JS/">JS高程 第二章 在HTML中使用JS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/JS高程-第一章-JS简史/" class="archive-article-date">
-  	<time datetime="2017-10-19T14:08:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/JS高程-第一章-JS简史/">JS高程 第一章 JS简史</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/关于版本控制/" class="archive-article-date">
-  	<time datetime="2017-10-19T14:06:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/关于版本控制/">关于版本控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/19/【译】如何十分钟免费搭建VPN-你为什么非常需要它/" class="archive-article-date">
-  	<time datetime="2017-10-19T11:42:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/【译】如何十分钟免费搭建VPN-你为什么非常需要它/">【译】如何十分钟免费搭建VPN(你为什么非常需要它)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">翻译</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/5/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="page-number current">6</span>
-    </nav>
   
 
 
@@ -565,8 +471,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

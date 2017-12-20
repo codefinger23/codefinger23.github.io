@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | CodeFinger</title>
+  <title>CSS: The Definitive Guide-Chapter 12-Lists and Generated Content | CodeFinger</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="CodeFinger">
-<meta property="og:url" content="http://yoursite.com/archives/2017/page/4/index.html">
+  <meta name="description" content="To see how all these list options fit together, we’ll explore basic list styling befor moving on to examine the generation of content and counters.  ListsTypes of Listslist-style-type  CSS2.1 values:">
+<meta name="keywords" content="读书笔记,CSS: The Definitive Guide">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS: The Definitive Guide-Chapter 12-Lists and Generated Content">
+<meta property="og:url" content="http://yoursite.com/2017/12/20/CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content/index.html">
 <meta property="og:site_name" content="CodeFinger">
+<meta property="og:description" content="To see how all these list options fit together, we’ll explore basic list styling befor moving on to examine the generation of content and counters.  ListsTypes of Listslist-style-type  CSS2.1 values:">
+<meta property="og:updated_time" content="2017-12-20T14:58:34.590Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeFinger">
+<meta name="twitter:title" content="CSS: The Definitive Guide-Chapter 12-Lists and Generated Content">
+<meta name="twitter:description" content="To see how all these list options fit together, we’ll explore basic list styling befor moving on to examine the generation of content and counters.  ListsTypes of Listslist-style-type  CSS2.1 values:">
   
     <link rel="alternative" href="/atom.xml" title="CodeFinger" type="application/atom+xml">
   
@@ -149,36 +154,135 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS: The Definitive Guide-Chapter 12-Lists and Generated Content
+    </h1>
+  
+
+        
+        <a href="/2017/12/20/CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content/" class="archive-article-date">
+  	<time datetime="2017-12-20T14:13:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>To see how all these list options fit together, we’ll explore basic list styling befor moving on to examine the generation of content and counters.</p>
+</blockquote>
+<h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><h3 id="Types-of-Lists"><a href="#Types-of-Lists" class="headerlink" title="Types of Lists"></a>Types of Lists</h3><p>list-style-type</p>
+<ul>
+<li>CSS2.1 values: disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | none | inherit</li>
+<li>CSS2 values: disc | circle | square | decimal | decimal-leading-zero | upper-alpha | lower-alpha | upper-roman | lower-roman | lower-greek | hebrew | armenian | georgian | cjk-ideographic | hiragana | katakana | hiraganairoha | none | inherit</li>
+<li>Initial value: disc</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h3 id="List-Item-Images"><a href="#List-Item-Images" class="headerlink" title="List Item Images"></a>List Item Images</h3><p>list-style-image</p>
+<ul>
+<li>Values: <uri> | none | inherit</uri></li>
+<li>Initial value: none</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Comoputed value: For <uri> values, the absolute URI; otherwise, none</uri></li>
+</ul>
+<h3 id="List-Marker-Positions"><a href="#List-Marker-Positions" class="headerlink" title="List-Marker Positions"></a>List-Marker Positions</h3><ul>
+<li>Values: inside | outside | inherit</li>
+<li>Initial value: outside</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h3 id="List-Styles-in-Shorthand"><a href="#List-Styles-in-Shorthand" class="headerlink" title="List Styles in Shorthand"></a>List Styles in Shorthand</h3><p>list-style</p>
+<ul>
+<li>Values: [ <list-style-type> || <list-style-image> || <list-style-position> ] | inherit</list-style-position></list-style-image></list-style-type></li>
+<li>Initial value:  Refer to individual properties</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Computed value: See individual properties</li>
+</ul>
+<h2 id="Generated-Content"><a href="#Generated-Content" class="headerlink" title="Generated Content"></a>Generated Content</h2><p>In ordered lists, the marker is a counter that increments by one for each successive list item.</p>
+<h3 id="Inserting-Generated-Content"><a href="#Inserting-Generated-Content" class="headerlink" title="Inserting Generated Content"></a>Inserting Generated Content</h3><p>To insert generated content into the document, use the :before and :after pseudo-elements. These place generated content before or after the content of an element by way of the contetn property.</p>
+<h3 id="Specifying-Content"><a href="#Specifying-Content" class="headerlink" title="Specifying Content"></a>Specifying Content</h3><p>content</p>
+<ul>
+<li>Values: normal | [ <string> | <uri> | <counter> | attr(<identifier>) | open-quote | close-quote | no-open-quote | no-close-quote ]+ | inherit</identifier></counter></uri></string></li>
+<li>Initial value: normal</li>
+<li>Applies to: :befor and :after pseudo-elemnets</li>
+<li>Inherited: No</li>
+<li>Computed value: For <uri> values, an absolute URI; for attribute references, the resulting string; otherwise, as specified.</uri></li>
+</ul>
+<p>quotes</p>
+<ul>
+<li>Values: [<string><string>]+ | none | inherit</string></string></li>
+<li>Initial value; User agent-dependent</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed values: As specified</li>
+</ul>
+<p>counter-reset</p>
+<ul>
+<li>Values: [<identifier><integer>?]+ | none | inherit</integer></identifier></li>
+<li>Initial value: User agent-dependent</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>counter-increment</p>
+<ul>
+<li>Values: [<identifier><integer>?]+ | none | inherit</integer></identifier></li>
+<li>Initial value: User agent-dependent</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Even though list styling isn’t as sophisticated as we might like, and browser support for generated content is somewhat spotty, the ability to style lists is still highly userful. </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>打赏2元，你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/20/Java编程思想-第5章-初始化和清理/" class="archive-article-date">
-  	<time datetime="2017-11-20T14:43:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/20/Java编程思想-第5章-初始化和清理/">Java编程思想 第5章 初始化和清理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -188,406 +292,122 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/20/CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/19/Java编程思想-第4章-控制执行流程/" class="archive-article-date">
-  	<time datetime="2017-11-19T06:49:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/19/CSS-The-Definitive-Guide-Chapter-11-Table-Layout/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS: The Definitive Guide-Chapter 11-Table Layout</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/19/Java编程思想-第4章-控制执行流程/">Java编程思想 第4章 控制执行流程</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/18/Java编程思想-第3章-操作符/" class="archive-article-date">
-  	<time datetime="2017-11-18T12:27:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/18/Java编程思想-第3章-操作符/">Java编程思想 第3章 操作符</a>
-    </h1>
+  <div id="SOHUCS" sid="CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content" ></div> 
+<script type="text/javascript"> 
+window.YiliaChangyanWrap = function() {
+    var appid = "cytdzaPlC"; 
+    var conf = "prod_82a316b9427f4648629ce48d3be8bcf0"; 
+    var width = window.innerWidth || document.documentElement.clientWidth; 
+    if (width < 960) { 
+    window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); }
+}
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/18/Java编程思想-第2章-一切都是对象/" class="archive-article-date">
-  	<time datetime="2017-11-17T18:12:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/18/Java编程思想-第2章-一切都是对象/">Java编程思想 第2章 一切都是对象</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/16/Java编程思想-第1章-对象导论/" class="archive-article-date">
-  	<time datetime="2017-11-16T14:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/16/Java编程思想-第1章-对象导论/">Java编程思想 第1章 对象导论</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Java编程思想</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/15/JS高程-第25章-新兴的API/" class="archive-article-date">
-  	<time datetime="2017-11-15T14:29:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/15/JS高程-第25章-新兴的API/">JS高程 第25章 新兴的API</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/14/JS高程-第24章-最佳实践/" class="archive-article-date">
-  	<time datetime="2017-11-14T14:16:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/14/JS高程-第24章-最佳实践/">JS高程 第24章 最佳实践</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/13/JS高程-第23章-离线应用与客户端存储/" class="archive-article-date">
-  	<time datetime="2017-11-13T15:41:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/13/JS高程-第23章-离线应用与客户端存储/">JS高程 第23章 离线应用与客户端存储</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/12/JS高程-第22章-高级技巧/" class="archive-article-date">
-  	<time datetime="2017-11-12T15:24:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/12/JS高程-第22章-高级技巧/">JS高程 第22章 高级技巧</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/11/JS高程-第21章-Ajax和Comet/" class="archive-article-date">
-  	<time datetime="2017-11-11T13:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/11/JS高程-第21章-Ajax和Comet/">JS高程 第21章 Ajax和Comet</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaScript高级程序设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/page/3/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><a class="page-number" href="/archives/2017/page/2/">2</a><a class="page-number" href="/archives/2017/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/archives/2017/page/5/">5</a><a class="page-number" href="/archives/2017/page/6/">6</a><a class="page-number" href="/archives/2017/page/7/">7</a><a class="extend next" rel="next" href="/archives/2017/page/5/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -611,8 +431,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

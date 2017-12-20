@@ -151,6 +151,153 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/20/CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content/">CSS: The Definitive Guide-Chapter 12-Lists and Generated Content</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/20/CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content/" class="archive-article-date">
+  	<time datetime="2017-12-20T14:13:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>To see how all these list options fit together, we’ll explore basic list styling befor moving on to examine the generation of content and counters.</p>
+</blockquote>
+<h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><h3 id="Types-of-Lists"><a href="#Types-of-Lists" class="headerlink" title="Types of Lists"></a>Types of Lists</h3><p>list-style-type</p>
+<ul>
+<li>CSS2.1 values: disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | none | inherit</li>
+<li>CSS2 values: disc | circle | square | decimal | decimal-leading-zero | upper-alpha | lower-alpha | upper-roman | lower-roman | lower-greek | hebrew | armenian | georgian | cjk-ideographic | hiragana | katakana | hiraganairoha | none | inherit</li>
+<li>Initial value: disc</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h3 id="List-Item-Images"><a href="#List-Item-Images" class="headerlink" title="List Item Images"></a>List Item Images</h3><p>list-style-image</p>
+<ul>
+<li>Values: <uri> | none | inherit</uri></li>
+<li>Initial value: none</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Comoputed value: For <uri> values, the absolute URI; otherwise, none</uri></li>
+</ul>
+<h3 id="List-Marker-Positions"><a href="#List-Marker-Positions" class="headerlink" title="List-Marker Positions"></a>List-Marker Positions</h3><ul>
+<li>Values: inside | outside | inherit</li>
+<li>Initial value: outside</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Computed value: As specified</li>
+</ul>
+<h3 id="List-Styles-in-Shorthand"><a href="#List-Styles-in-Shorthand" class="headerlink" title="List Styles in Shorthand"></a>List Styles in Shorthand</h3><p>list-style</p>
+<ul>
+<li>Values: [ <list-style-type> || <list-style-image> || <list-style-position> ] | inherit</list-style-position></list-style-image></list-style-type></li>
+<li>Initial value:  Refer to individual properties</li>
+<li>Applies to: Elements whose display value is list-item</li>
+<li>Inherited: Yes</li>
+<li>Computed value: See individual properties</li>
+</ul>
+<h2 id="Generated-Content"><a href="#Generated-Content" class="headerlink" title="Generated Content"></a>Generated Content</h2><p>In ordered lists, the marker is a counter that increments by one for each successive list item.</p>
+<h3 id="Inserting-Generated-Content"><a href="#Inserting-Generated-Content" class="headerlink" title="Inserting Generated Content"></a>Inserting Generated Content</h3><p>To insert generated content into the document, use the :before and :after pseudo-elements. These place generated content before or after the content of an element by way of the contetn property.</p>
+<h3 id="Specifying-Content"><a href="#Specifying-Content" class="headerlink" title="Specifying Content"></a>Specifying Content</h3><p>content</p>
+<ul>
+<li>Values: normal | [ <string> | <uri> | <counter> | attr(<identifier>) | open-quote | close-quote | no-open-quote | no-close-quote ]+ | inherit</identifier></counter></uri></string></li>
+<li>Initial value: normal</li>
+<li>Applies to: :befor and :after pseudo-elemnets</li>
+<li>Inherited: No</li>
+<li>Computed value: For <uri> values, an absolute URI; for attribute references, the resulting string; otherwise, as specified.</uri></li>
+</ul>
+<p>quotes</p>
+<ul>
+<li>Values: [<string><string>]+ | none | inherit</string></string></li>
+<li>Initial value; User agent-dependent</li>
+<li>Applies to: All elements</li>
+<li>Inherited: Yes</li>
+<li>Computed values: As specified</li>
+</ul>
+<p>counter-reset</p>
+<ul>
+<li>Values: [<identifier><integer>?]+ | none | inherit</integer></identifier></li>
+<li>Initial value: User agent-dependent</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<p>counter-increment</p>
+<ul>
+<li>Values: [<identifier><integer>?]+ | none | inherit</integer></identifier></li>
+<li>Initial value: User agent-dependent</li>
+<li>Applies to: All elements</li>
+<li>Inherited: No</li>
+<li>Computed value: As specified</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Even though list styling isn’t as sophisticated as we might like, and browser support for generated content is somewhat spotty, the ability to style lists is still highly userful. </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/20/CSS-The-Definitive-Guide-Chapter-12-Lists-and-Generated-Content/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-CSS-The-Definitive-Guide-Chapter-11-Table-Layout" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -889,88 +1036,6 @@
 
 
   
-    <article id="post-CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/10/CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade/">CSS: The Definitive Guide-Chapter 3-Structure and the Cascade</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/10/CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade/" class="archive-article-date">
-  	<time datetime="2017-12-10T12:20:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>The structural tree is what allows selectors to function and is also central to a similarly crucial aspect of CSS: inheritance.</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2017/12/10/CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CSS: The Definitive Guide</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/10/CSS-The-Definitive-Guide-Chapter-3-Structure-and-the-Cascade/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1088,11 +1153,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">人月神话</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color5">人月神话</a>
               </li>
             
             <div class="clearfix"></div>
